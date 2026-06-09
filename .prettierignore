@@ -1,0 +1,8 @@
+node_modules
+.next
+.vercel
+public
+pnpm-lock.yaml
+prisma/migrations
+CLAUDE.md
+README.md

@@ -1,0 +1,185 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Product {
+  id                 String           @id @default(cuid())
+  sku                String           @unique
+  slug               String           @unique
+  name               String
+  description        String?          @db.Text
+  brand              String
+  categoryId         String
+  category           Category         @relation(fields: [categoryId], references: [id])
+  price              Decimal          @db.Decimal(10, 2)
+  promoPrice         Decimal?         @db.Decimal(10, 2)
+  installments       Int?
+  installmentFree    Boolean          @default(false)
+  isActive           Boolean          @default(true)
+  isFeatured         Boolean          @default(false)
+  isNew              Boolean          @default(false)
+  isBestSellerManual Boolean          @default(false)
+  videoUrl           String?
+  material           String?
+  weight             String?
+  collar             String?
+  technology         String?
+  useIndication      String?
+  warranty           String?
+  origin             String?
+  metaTitle          String?
+  metaDescription    String?
+  images             ProductImage[]
+  variants           ProductVariant[]
+  reviews            Review[]
+  views              Int              @default(0)
+  whatsappClicks     Int              @default(0)
+  createdAt          DateTime         @default(now())
+  updatedAt          DateTime         @updatedAt
+
+  @@index([categoryId, isActive])
+  @@index([brand])
+  @@index([isFeatured, isActive])
+  @@index([isNew, isActive])
+}
+
+model ProductImage {
+  id          String  @id @default(cuid())
+  productId   String
+  product     Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  urlOriginal String
+  urlLarge    String
+  urlMedium   String
+  urlThumb    String
+  alt         String?
+  order       Int     @default(0)
+
+  @@index([productId])
+}
+
+model ProductVariant {
+  id        String  @id @default(cuid())
+  productId String
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  color     String
+  colorHex  String?
+  size      String
+  stock     Int     @default(0)
+
+  @@unique([productId, color, size])
+  @@index([productId])
+}
+
+model Category {
+  id              String    @id @default(cuid())
+  slug            String    @unique
+  name            String
+  image           String?
+  metaTitle       String?
+  metaDescription String?
+  order           Int       @default(0)
+  isActive        Boolean   @default(true)
+  products        Product[]
+}
+
+model Coupon {
+  id            String    @id @default(cuid())
+  code          String    @unique
+  description   String?
+  discountType  String
+  discountValue Decimal   @db.Decimal(10, 2)
+  validUntil    DateTime?
+  maxUses       Int?
+  uses          Int       @default(0)
+  isActive      Boolean   @default(true)
+  createdAt     DateTime  @default(now())
+}
+
+model Review {
+  id           String   @id @default(cuid())
+  productId    String
+  product      Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  customerName String
+  city         String?
+  rating       Int
+  comment      String   @db.Text
+  isApproved   Boolean  @default(false)
+  ipHash       String?
+  createdAt    DateTime @default(now())
+
+  @@index([productId, isApproved])
+}
+
+model WhatsappLead {
+  id         String   @id @default(cuid())
+  items      Json
+  couponCode String?
+  userAgent  String?
+  referrer   String?
+  device     String?
+  city       String?
+  createdAt  DateTime @default(now())
+
+  @@index([createdAt])
+}
+
+model AdminUser {
+  id        String   @id @default(cuid())
+  authId    String   @unique
+  email     String   @unique
+  name      String?
+  role      String   @default("admin")
+  createdAt DateTime @default(now())
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  userId    String
+  userEmail String
+  action    String
+  entity    String
+  entityId  String?
+  changes   Json?
+  ipAddress String?
+  createdAt DateTime @default(now())
+
+  @@index([entity, entityId])
+  @@index([userId])
+  @@index([createdAt])
+}
+
+model SiteEvent {
+  id        String   @id @default(cuid())
+  type      String
+  productId String?
+  metadata  Json?
+  sessionId String?
+  userAgent String?
+  referrer  String?
+  device    String?
+  createdAt DateTime @default(now())
+
+  @@index([type, createdAt])
+  @@index([sessionId])
+}
+
+model SiteConfig {
+  id                 String   @id @default("singleton")
+  whatsappNumber     String
+  storeAddress       String?
+  storeHours         String?
+  instagramUrl       String?
+  tiktokUrl          String?
+  googleMapsEmbed    String?
+  promoBarMessages   Json
+  isMaintenanceMode  Boolean  @default(false)
+  maintenanceMessage String?
+  heroSlides         Json
+  updatedAt          DateTime @updatedAt
+}

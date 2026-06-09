@@ -1,0 +1,194 @@
+@import 'tailwindcss';
+
+/* ============================================================
+   DESIGN TOKENS — Cariri Chuteiras
+   Tema escuro por padrão. Override via [data-theme="light"].
+   Identidade: preto + roxo neon + escudo central.
+   ============================================================ */
+
+@theme {
+  /* === Backgrounds === */
+  --color-bg-primary: rgb(10 10 10);
+  --color-bg-secondary: rgb(20 20 20);
+  --color-bg-tertiary: rgb(31 31 31);
+
+  /* === Brand (neon roxo) === */
+  --color-neon: rgb(107 29 255);
+  --color-neon-dark: rgb(61 10 153);
+  --color-neon-hover: rgb(168 85 247);
+
+  /* === Foreground === */
+  --color-foreground: rgb(255 255 255);
+  --color-ice: rgb(245 243 255);
+
+  /* === Neutros === */
+  --color-gray-100: rgb(229 229 229);
+  --color-gray-400: rgb(163 163 163);
+  --color-gray-600: rgb(82 82 82);
+  --color-border: rgb(38 38 38);
+
+  /* === Funcionais === */
+  --color-whatsapp: rgb(37 211 102);
+  --color-whatsapp-dark: rgb(18 140 126);
+  --color-success: rgb(16 185 129);
+  --color-danger: rgb(239 68 68);
+  --color-warning: rgb(245 158 11);
+
+  /* === Fontes === */
+  --font-display: var(--font-anton), 'Anton', sans-serif;
+  --font-body: var(--font-inter), 'Inter', sans-serif;
+
+  /* === Border radius === */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  /* === Animations === */
+  --animate-pulse-neon: pulse-neon 2s ease-in-out infinite;
+  --animate-fade-in: fade-in 0.5s ease-out;
+  --animate-slide-up: slide-up 0.5s ease-out;
+  --animate-spin-slow: spin 8s linear infinite;
+
+  @keyframes pulse-neon {
+    0%,
+    100% {
+      box-shadow: 0 0 16px rgb(107 29 255 / 0.45);
+    }
+    50% {
+      box-shadow: 0 0 32px rgb(107 29 255 / 0.75);
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes slide-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* === Tema CLARO (toggle) === */
+[data-theme='light'] {
+  --color-bg-primary: rgb(255 255 255);
+  --color-bg-secondary: rgb(248 249 251);
+  --color-bg-tertiary: rgb(239 240 244);
+  --color-foreground: rgb(10 10 10);
+  --color-border: rgb(229 231 235);
+  --color-gray-100: rgb(31 31 31);
+  --color-gray-400: rgb(82 82 82);
+  --color-gray-600: rgb(163 163 163);
+  /* neon, whatsapp e funcionais permanecem — é a marca */
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    border-color: var(--color-border);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-bg-primary);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.025em;
+  }
+
+  ::selection {
+    background-color: rgb(107 29 255 / 0.4);
+    color: var(--color-foreground);
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-bg-secondary);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-neon-dark);
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-neon);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-neon);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* ============================================================
+   UTILITIES — efeitos neon e gradientes
+   ============================================================ */
+
+@utility neon-glow {
+  box-shadow: 0 0 24px rgb(107 29 255 / 0.45);
+}
+
+@utility neon-glow-sm {
+  box-shadow: 0 0 12px rgb(107 29 255 / 0.35);
+}
+
+@utility neon-glow-lg {
+  box-shadow: 0 0 48px rgb(107 29 255 / 0.55);
+}
+
+@utility neon-text {
+  text-shadow: 0 0 12px rgb(107 29 255 / 0.6);
+}
+
+@utility neon-border {
+  border: 1px solid var(--color-neon);
+  box-shadow: 0 0 16px rgb(107 29 255 / 0.4);
+}
+
+@utility gradient-neon {
+  background-image: linear-gradient(135deg, var(--color-neon) 0%, var(--color-neon-dark) 100%);
+}
+
+@utility gradient-neon-hover {
+  background-image: linear-gradient(135deg, var(--color-neon-hover) 0%, var(--color-neon) 100%);
+}
