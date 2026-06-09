@@ -25,7 +25,7 @@ export const getSiteConfig = cache(async () => {
     tiktokUrl: null,
     googleMapsEmbed: null,
     promoBarMessages: [
-      '🚚 Entregamos para todo o Cariri',
+      '🚚 Entregamos para todo o Brasil',
       '⚽ Chuteiras das melhores marcas',
       '🔥 Promoções exclusivas toda semana',
     ],

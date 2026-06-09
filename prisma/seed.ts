@@ -271,7 +271,7 @@ async function main() {
       tiktokUrl: 'https://tiktok.com/@caririchuteiras',
       googleMapsEmbed: '',
       promoBarMessages: [
-        '🚚 Entregamos para todo o Cariri',
+        '🚚 Entregamos para todo o Brasil',
         '⚽ Chuteiras das melhores marcas',
         '🔥 Promoções exclusivas toda semana',
         '💰 10x sem juros em produtos selecionados',

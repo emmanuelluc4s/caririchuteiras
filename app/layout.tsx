@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: '%s | Cariri Chuteiras',
   },
   description:
-    'Chuteiras, tênis, camisas e acessórios esportivos das melhores marcas. Entregamos para todo o Cariri.',
+    'Chuteiras, tênis, camisas e acessórios esportivos das melhores marcas. Entregamos para todo o Brasil.',
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
   openGraph: {
     type: 'website',
