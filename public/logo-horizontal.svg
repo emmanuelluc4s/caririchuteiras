@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" fill="none">
+  <path
+    d="M5 5 L25 12 L25 32 Q25 50 15 58 Q5 50 5 32 Z"
+    fill="#0A0A0A"
+    stroke="#6B1DFF"
+    stroke-width="2"
+  />
+  <text x="15" y="28" font-family="Anton, sans-serif" font-size="12" font-weight="bold" fill="#6B1DFF" text-anchor="middle">CC</text>
+  <text x="40" y="28" font-family="Anton, sans-serif" font-size="22" fill="#FFFFFF" letter-spacing="1">CARIRI</text>
+  <text x="40" y="48" font-family="Anton, sans-serif" font-size="14" fill="#6B1DFF" letter-spacing="2">CHUTEIRAS</text>
+</svg>

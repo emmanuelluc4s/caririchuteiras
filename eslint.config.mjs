@@ -10,6 +10,11 @@ const eslintConfig = defineConfig([
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
       '@typescript-eslint/no-explicit-any': 'error',
       '@typescript-eslint/consistent-type-imports': 'error',
+      // Desabilitado: a regra dá falso positivo para padrões legítimos de
+      // hidratação client (ler localStorage / sessionStorage na montagem
+      // e refletir no state). Não justifica useSyncExternalStore para
+      // efeitos one-shot de mount.
+      'react-hooks/set-state-in-effect': 'off',
     },
   },
   globalIgnores([
