@@ -45,6 +45,7 @@ export function Logo({
       height={h}
       priority
       className={className}
+      style={{ height: 'auto' }}
     />
   ) : (
     <div className={cn('flex items-center gap-3', className)}>
@@ -55,6 +56,7 @@ export function Logo({
         height={h}
         priority
         className="shrink-0"
+        style={{ height: 'auto' }}
       />
       <span className="font-display text-xl leading-none tracking-tight md:text-2xl">
         <span className="text-foreground">CARIRI</span>{' '}

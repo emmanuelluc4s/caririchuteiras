@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button'
 import {
   Sheet,
   SheetContent,
+  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -39,6 +40,10 @@ export function MobileMenu() {
           <SheetTitle className="flex items-center">
             <Logo variant="horizontal" width={140} height={36} href={undefined} />
           </SheetTitle>
+          <SheetDescription className="sr-only">
+            Menu principal de navegação da Cariri Chuteiras com acesso a categorias,
+            promoções, novidades e contato.
+          </SheetDescription>
         </SheetHeader>
 
         <nav className="flex flex-col px-2 py-4" aria-label="Menu mobile">
