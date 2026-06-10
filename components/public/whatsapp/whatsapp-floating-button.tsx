@@ -2,6 +2,10 @@
 
 import * as React from 'react'
 import { motion } from 'framer-motion'
+import { useCartStore, selectItemsCount } from '@/lib/whatsapp/cart-store'
+import { useHasHydrated } from '@/lib/hooks/use-has-hydrated'
+import { useAnalytics } from '@/lib/analytics/use-analytics'
+import { buildWhatsappUrl } from '@/lib/whatsapp/build-message'
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
@@ -11,83 +15,76 @@ function WhatsAppIcon({ className }: { className?: string }) {
   )
 }
 
-type Props = {
+// Prop whatsappNumber mantida para compatibilidade com o layout do M02.
+// Não é usada diretamente — buildWhatsappUrl puxa de env.
+export function WhatsappFloatingButton({
+  whatsappNumber: _whatsappNumber,
+}: {
   whatsappNumber: string
-  /** Número de itens no carrinho de intenção (integração no Módulo 03). */
-  count?: number
-  /** Quando definido, vira `<button>` (Módulo 03 vai abrir o drawer do carrinho). */
-  onClick?: () => void
-}
-
-export function WhatsappFloatingButton({ whatsappNumber, count = 0, onClick }: Props) {
+}) {
   const [visible, setVisible] = React.useState(false)
+  const hydrated = useHasHydrated()
+  const count = useCartStore(selectItemsCount)
+  const open = useCartStore((s) => s.open)
+  const { track } = useAnalytics()
 
   React.useEffect(() => {
-    // Mostrar após pequeno delay para não competir com LCP
     const t = setTimeout(() => setVisible(true), 1200)
     return () => clearTimeout(t)
   }, [])
 
-  const ariaLabel =
-    count > 0 ? `Abrir conversa com ${count} item(ns)` : 'Falar no WhatsApp'
+  function handleClick() {
+    if (hydrated && count > 0) {
+      // Tem itens → abre drawer
+      open()
+    } else {
+      // Vazio → wa.me direto com mensagem genérica
+      track('whatsapp_click_single', { items: [] })
+      const url = buildWhatsappUrl({ items: [] })
+      window.open(url, '_blank', 'noopener,noreferrer')
+    }
+  }
 
-  const buttonClasses =
-    'group bg-whatsapp hover:bg-whatsapp-dark relative flex h-14 w-14 items-center justify-center rounded-full text-white shadow-2xl transition-all duration-300 hover:scale-110 md:h-16 md:w-16'
-  const buttonStyle = { boxShadow: '0 8px 32px rgba(37, 211, 102, 0.45)' }
-
-  const inner = (
-    <>
-      {/* Ondas de pulso */}
-      <span
-        className="bg-whatsapp absolute inset-0 animate-ping rounded-full opacity-50"
-        style={{ animationDuration: '2.5s' }}
-      />
-      <span className="bg-whatsapp/30 absolute inset-0 animate-pulse rounded-full" />
-
-      <WhatsAppIcon className="relative h-7 w-7 md:h-8 md:w-8" />
-
-      {/* Badge do contador */}
-      {count > 0 && (
-        <span className="bg-neon border-bg-primary neon-glow-sm absolute -right-1 -top-1 flex h-6 min-w-6 items-center justify-center rounded-full border-2 px-1.5 text-[11px] font-bold text-white">
-          {count > 99 ? '99+' : count}
-        </span>
-      )}
-    </>
-  )
-
-  const href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-    'Olá! Vim pelo site da Cariri Chuteiras. Gostaria de mais informações.',
-  )}`
+  const displayCount = hydrated ? count : 0
 
   return (
     <motion.div
       initial={{ scale: 0, opacity: 0 }}
       animate={visible ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 0 }}
       transition={{ type: 'spring', stiffness: 260, damping: 20 }}
-      className="fixed bottom-5 right-5 z-50 md:bottom-8 md:right-8"
+      className="fixed bottom-5 right-5 z-40 md:bottom-8 md:right-8"
     >
-      {onClick ? (
-        <button
-          type="button"
-          onClick={onClick}
-          aria-label={ariaLabel}
-          className={buttonClasses}
-          style={buttonStyle}
-        >
-          {inner}
-        </button>
-      ) : (
-        <a
-          href={href}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={ariaLabel}
-          className={buttonClasses}
-          style={buttonStyle}
-        >
-          {inner}
-        </a>
-      )}
+      <button
+        type="button"
+        onClick={handleClick}
+        aria-label={
+          displayCount > 0
+            ? `Abrir conversa com ${displayCount} ${displayCount > 1 ? 'itens' : 'item'}`
+            : 'Falar no WhatsApp'
+        }
+        className="group bg-whatsapp hover:bg-whatsapp-dark relative flex h-14 w-14 items-center justify-center rounded-full text-white shadow-2xl transition-all duration-300 hover:scale-110 md:h-16 md:w-16"
+        style={{ boxShadow: '0 8px 32px rgba(37, 211, 102, 0.45)' }}
+      >
+        <span
+          className="bg-whatsapp absolute inset-0 animate-ping rounded-full opacity-50"
+          style={{ animationDuration: '2.5s' }}
+        />
+        <span className="bg-whatsapp/30 absolute inset-0 animate-pulse rounded-full" />
+
+        <WhatsAppIcon className="relative h-7 w-7 md:h-8 md:w-8" />
+
+        {displayCount > 0 && (
+          <motion.span
+            key={displayCount}
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 15 }}
+            className="bg-neon border-bg-primary neon-glow-sm absolute -right-1 -top-1 flex h-6 min-w-6 items-center justify-center rounded-full border-2 px-1.5 text-[11px] font-bold text-white"
+          >
+            {displayCount > 99 ? '99+' : displayCount}
+          </motion.span>
+        )}
+      </button>
     </motion.div>
   )
 }

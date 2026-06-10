@@ -2,6 +2,7 @@ import { PromoBar } from '@/components/public/layout/promo-bar'
 import { Header } from '@/components/public/layout/header'
 import { Footer } from '@/components/public/layout/footer'
 import { WhatsappFloatingButton } from '@/components/public/whatsapp/whatsapp-floating-button'
+import { WhatsappCartDrawer } from '@/components/public/whatsapp/whatsapp-cart-drawer'
 import { CookieBanner } from '@/components/public/cookie-banner'
 import { getSiteConfig } from '@/lib/site-config'
 
@@ -19,7 +20,11 @@ export default async function PublicLayout({ children }: { children: React.React
       <main className="min-h-screen">{children}</main>
 
       <Footer siteConfig={config} />
+
+      {/* Sistema WhatsApp (Módulo 03) */}
       <WhatsappFloatingButton whatsappNumber={config.whatsappNumber} />
+      <WhatsappCartDrawer />
+
       <CookieBanner />
     </>
   )
