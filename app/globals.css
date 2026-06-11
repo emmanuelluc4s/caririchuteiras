@@ -232,3 +232,16 @@
 @utility animate-accordion-up {
   animation: accordion-up 0.2s ease-out;
 }
+
+/* ============================================================
+   cmdk (command palette - Módulo 07)
+   ============================================================ */
+[cmdk-input] {
+  background-color: transparent !important;
+}
+[cmdk-list] {
+  scrollbar-width: thin;
+}
+[cmdk-group] + [cmdk-group] {
+  margin-top: 0.25rem;
+}

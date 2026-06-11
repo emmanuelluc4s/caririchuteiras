@@ -1,8 +1,9 @@
 'use client'
 
 import * as React from 'react'
-import { useRouter } from 'next/navigation'
 import { Search } from 'lucide-react'
+import { useSearchModal } from '@/lib/search/search-modal-store'
+import { cn } from '@/lib/utils'
 
 type Props = {
   className?: string
@@ -13,31 +14,40 @@ export function SearchBar({
   className,
   placeholder = 'Buscar chuteiras, camisas, tênis...',
 }: Props) {
-  const router = useRouter()
-  const [query, setQuery] = React.useState('')
+  const open = useSearchModal((s) => s.open)
+  const isOpen = useSearchModal((s) => s.isOpen)
+  const [isMac, setIsMac] = React.useState(false)
 
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault()
-    const trimmed = query.trim()
-    if (!trimmed) return
-    router.push(`/busca?q=${encodeURIComponent(trimmed)}`)
-  }
+  React.useEffect(() => {
+    setIsMac(navigator.platform.toLowerCase().includes('mac'))
+  }, [])
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      role="search"
-      className={`relative flex w-full max-w-xl items-center ${className ?? ''}`}
+    <button
+      type="button"
+      onClick={open}
+      aria-label="Abrir busca"
+      aria-expanded={isOpen}
+      className={cn(
+        'group relative flex h-11 w-full max-w-xl items-center rounded-md border px-3 text-left transition-all',
+        isOpen
+          ? 'border-neon bg-bg-tertiary neon-glow-sm'
+          : 'border-border bg-bg-secondary hover:border-neon/40',
+        className,
+      )}
     >
-      <Search className="pointer-events-none absolute left-3 h-4 w-4 text-gray-400" />
-      <input
-        type="search"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        placeholder={placeholder}
-        className="border-border bg-bg-secondary text-foreground focus:border-neon focus:ring-neon/30 h-11 w-full rounded-md border pl-10 pr-4 text-sm transition-colors placeholder:text-gray-400 focus:outline-none focus:ring-2"
-        aria-label="Buscar produtos"
+      <Search
+        className={cn(
+          'h-4 w-4 shrink-0 transition-colors',
+          isOpen ? 'text-neon' : 'text-gray-400',
+        )}
       />
-    </form>
+      <span className="ml-3 flex-1 truncate text-sm text-gray-400">
+        {placeholder}
+      </span>
+      <kbd className="ml-2 hidden shrink-0 items-center gap-1 rounded border border-border bg-bg-primary px-1.5 py-0.5 font-mono text-[10px] text-gray-400 md:inline-flex">
+        {isMac ? '⌘' : 'Ctrl'} K
+      </kbd>
+    </button>
   )
 }
