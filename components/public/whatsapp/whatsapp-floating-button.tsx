@@ -3,9 +3,14 @@
 import * as React from 'react'
 import { motion } from 'framer-motion'
 import { useCartStore, selectItemsCount } from '@/lib/whatsapp/cart-store'
+import {
+  useCompareStore,
+  selectCompareCount,
+} from '@/lib/compare/compare-store'
 import { useHasHydrated } from '@/lib/hooks/use-has-hydrated'
 import { useAnalytics } from '@/lib/analytics/use-analytics'
 import { buildWhatsappUrl } from '@/lib/whatsapp/build-message'
+import { cn } from '@/lib/utils'
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
@@ -25,8 +30,10 @@ export function WhatsappFloatingButton({
   const [visible, setVisible] = React.useState(false)
   const hydrated = useHasHydrated()
   const count = useCartStore(selectItemsCount)
+  const compareCount = useCompareStore(selectCompareCount)
   const open = useCartStore((s) => s.open)
   const { track } = useAnalytics()
+  const hasCompareItems = hydrated && compareCount > 0
 
   React.useEffect(() => {
     const t = setTimeout(() => setVisible(true), 1200)
@@ -52,7 +59,12 @@ export function WhatsappFloatingButton({
       initial={{ scale: 0, opacity: 0 }}
       animate={visible ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 0 }}
       transition={{ type: 'spring', stiffness: 260, damping: 20 }}
-      className="fixed bottom-5 right-5 z-40 md:bottom-8 md:right-8"
+      className={cn(
+        'fixed right-5 z-40 transition-all duration-300 md:right-8',
+        hasCompareItems
+          ? 'bottom-[110px] md:bottom-[130px]'
+          : 'bottom-5 md:bottom-8',
+      )}
     >
       <button
         type="button"
