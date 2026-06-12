@@ -21,10 +21,12 @@ import { ProductPriceBlock } from '@/components/public/product/product-price-blo
 import { ProductCouponHighlight } from '@/components/public/product/product-coupon-highlight'
 import { ProductDescription } from '@/components/public/product/product-description'
 import { ShareButtons } from '@/components/public/product/share-buttons'
+import { CompareButton } from '@/components/public/compare/compare-button'
 import { ProductReviews } from '@/components/public/product/product-reviews'
 import { RelatedProducts } from '@/components/public/product/related-products'
 import { ProductPageClient } from '@/components/public/product/product-page-client'
 import { ProductViewTracker } from '@/components/public/product/product-view-tracker'
+import { RecentlyViewedTracker } from '@/components/public/recently-viewed/recently-viewed-tracker'
 import { Badge } from '@/components/ui/badge'
 
 export const revalidate = 3600
@@ -147,6 +149,17 @@ export default async function ProductPage({
       />
 
       <ProductViewTracker productId={product.id} slug={product.slug} />
+      <RecentlyViewedTracker
+        productId={product.id}
+        slug={product.slug}
+        name={product.name}
+        brand={product.brand}
+        imageUrl={product.images[0]?.urlThumb}
+        price={Number(product.price)}
+        promoPrice={
+          product.promoPrice ? Number(product.promoPrice) : undefined
+        }
+      />
 
       <div className="mx-auto max-w-7xl px-4 py-4 md:px-6 md:py-6">
         <ProductBreadcrumb items={breadcrumbItems} />
@@ -231,6 +244,17 @@ export default async function ProductPage({
               }))}
               categoryName={product.category.name}
             />
+
+            <div className="flex items-center gap-3">
+              <CompareButton
+                productId={product.id}
+                productName={product.name}
+                variant="full"
+              />
+              <p className="text-xs text-gray-400">
+                Compare com outros até decidir
+              </p>
+            </div>
 
             <ShareButtons
               productName={`${product.brand} ${product.name}`}

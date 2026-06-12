@@ -10,6 +10,8 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { useCartStore } from '@/lib/whatsapp/cart-store'
 import { useAnalytics } from '@/lib/analytics/use-analytics'
+import { CompareButton } from '@/components/public/compare/compare-button'
+import { useQuickViewStore } from '@/lib/quick-view/store'
 import { formatBRL, cn } from '@/lib/utils'
 import type { ProductCardData } from '@/lib/types/product-card'
 
@@ -23,6 +25,7 @@ type Props = {
 export function ProductCard({ product, className, priority = false }: Props) {
   const addItem = useCartStore((s) => s.addItem)
   const openCart = useCartStore((s) => s.open)
+  const openQuickView = useQuickViewStore((s) => s.open)
   const { track } = useAnalytics()
 
   const finalPrice = product.promoPrice ?? product.price
@@ -149,15 +152,24 @@ export function ProductCard({ product, className, priority = false }: Props) {
           >
             <ShoppingBag className="h-4 w-4" />
           </button>
-          {/* Quick view real vem no Módulo 10 — por enquanto, só abre a página */}
-          <Link
-            href={`/produto/${product.slug}`}
+          <CompareButton
+            productId={product.id}
+            productName={product.name}
+            variant="icon"
+          />
+          <button
+            type="button"
+            onClick={(e) => {
+              e.preventDefault()
+              e.stopPropagation()
+              openQuickView(product.slug)
+            }}
             className="bg-bg-primary/90 text-foreground hover:bg-neon grid h-10 w-10 place-items-center rounded-full shadow-lg backdrop-blur-sm transition-all hover:scale-110 hover:text-white"
-            aria-label={`Ver detalhes de ${product.name}`}
-            title="Ver detalhes"
+            aria-label={`Visualização rápida de ${product.name}`}
+            title="Visualização rápida"
           >
             <Eye className="h-4 w-4" />
-          </Link>
+          </button>
         </motion.div>
       </Link>
 
@@ -215,6 +227,15 @@ export function ProductCard({ product, className, priority = false }: Props) {
           <p className="mt-0.5 text-[10px] text-gray-400">
             ou 10x de {formatBRL(finalPrice / 10)} sem juros
           </p>
+          {product.totalStock != null &&
+            product.totalStock > 0 &&
+            product.totalStock < 5 && (
+              <p className="mt-1 flex items-center gap-1 text-[10px] font-semibold text-warning">
+                <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-warning" />
+                Últimas {product.totalStock} unidade
+                {product.totalStock > 1 ? 's' : ''}
+              </p>
+            )}
         </div>
 
         {/* CTA mobile */}

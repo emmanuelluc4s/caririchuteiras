@@ -9,6 +9,7 @@ import { SearchBar } from '@/components/public/search/search-bar'
 import { ThemeToggle } from './theme-toggle'
 import { WhatsappHeaderIcon } from './whatsapp-header-icon'
 import { MobileMenu } from './mobile-menu'
+import { RecentlyViewedDropdown } from '@/components/public/recently-viewed/recently-viewed-dropdown'
 import { MAIN_NAV } from '@/lib/navigation'
 import { cn } from '@/lib/utils'
 
@@ -69,6 +70,7 @@ export function Header({ whatsappNumber }: Props) {
           </nav>
 
           <ThemeToggle />
+          <RecentlyViewedDropdown />
           <WhatsappHeaderIcon whatsappNumber={whatsappNumber} />
         </div>
       </div>

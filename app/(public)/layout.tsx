@@ -5,6 +5,10 @@ import { WhatsappFloatingButton } from '@/components/public/whatsapp/whatsapp-fl
 import { WhatsappCartDrawer } from '@/components/public/whatsapp/whatsapp-cart-drawer'
 import { CookieBanner } from '@/components/public/cookie-banner'
 import { SearchModal } from '@/components/public/search/search-modal'
+import { CompareBottomBarWrapper } from '@/components/public/compare/compare-bottom-bar-wrapper'
+import { ExitIntentModal } from '@/components/public/conversion/exit-intent-modal'
+import { QuickViewModal } from '@/components/public/quick-view/quick-view-modal'
+import { RecentlyViewedCarousel } from '@/components/public/recently-viewed/recently-viewed-carousel'
 import { getSiteConfig } from '@/lib/site-config'
 import {
   getPopularSearches,
@@ -40,7 +44,10 @@ export default async function PublicLayout({
       <PromoBar messages={promoMessages} />
       <Header whatsappNumber={config.whatsappNumber} />
 
-      <main className="min-h-screen">{children}</main>
+      <main className="min-h-screen pb-[100px] md:pb-[120px]">{children}</main>
+
+      {/* Carrossel "Vistos recentemente" antes do footer (Módulo 10) */}
+      <RecentlyViewedCarousel />
 
       <Footer siteConfig={config} />
 
@@ -53,6 +60,13 @@ export default async function PublicLayout({
         popularSearches={popularSearches}
         popularProducts={popularProducts}
       />
+
+      {/* Comparador (Módulo 08) */}
+      <CompareBottomBarWrapper />
+
+      {/* Gatilhos de conversão (Módulo 10) */}
+      <QuickViewModal />
+      <ExitIntentModal />
 
       <CookieBanner />
     </>

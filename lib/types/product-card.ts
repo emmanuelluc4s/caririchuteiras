@@ -14,6 +14,8 @@ export type ProductCardData = {
     colorHex: string | null
     size: string
   }>
+  /** Soma de estoque das variantes (quando disponível). Usado para mini-badge de urgência. */
+  totalStock?: number
 }
 
 /**
@@ -29,11 +31,21 @@ type PrismaProductLike = {
   promoPrice: { toString: () => string } | number | null
   isNew: boolean
   images: Array<{ urlMedium: string; alt: string | null }>
-  variants: Array<{ color: string; colorHex: string | null; size: string }>
+  variants: Array<{
+    color: string
+    colorHex: string | null
+    size: string
+    stock?: number
+  }>
   category?: { name: string; slug: string }
 }
 
 export function toProductCardData(p: PrismaProductLike): ProductCardData {
+  const totalStock = p.variants.reduce(
+    (sum, v) => sum + (typeof v.stock === 'number' ? v.stock : 0),
+    0,
+  )
+
   return {
     id: p.id,
     slug: p.slug,
@@ -46,5 +58,6 @@ export function toProductCardData(p: PrismaProductLike): ProductCardData {
     isNew: p.isNew,
     category: p.category,
     variants: p.variants,
+    totalStock: totalStock > 0 ? totalStock : undefined,
   }
 }
