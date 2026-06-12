@@ -18,11 +18,13 @@ export const getSiteConfig = cache(async () => {
 
   return {
     id: 'singleton',
-    whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '5588999999999',
-    storeAddress: 'Endereço a definir',
+    whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '5588981350830',
+    storeAddress: 'Rua P 6, 5, Vila Sta Terezinha, Barbalha/CE — 63180-000',
     storeHours: 'Segunda a Sábado: 8h às 18h',
-    instagramUrl: null,
-    tiktokUrl: null,
+    instagramUrl:
+      'https://www.instagram.com/cariri__chuteiras?igsh=eHAyb3NuNXpyZzNn',
+    tiktokUrl:
+      'https://www.tiktok.com/@cariri__chuteiras01?_r=1&_t=ZS-977iiJHszTQ',
     googleMapsEmbed: null,
     promoBarMessages: [
       '🚚 Entregamos para todo o Brasil',

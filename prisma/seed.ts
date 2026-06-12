@@ -264,11 +264,13 @@ async function main() {
   await prisma.siteConfig.create({
     data: {
       id: 'singleton',
-      whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '5588999999999',
-      storeAddress: 'Rua Principal, 123 — Barbalha/CE',
+      whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '5588981350830',
+      storeAddress: 'Rua P 6, 5, Vila Sta Terezinha, Barbalha/CE — 63180-000',
       storeHours: 'Segunda a Sexta: 8h às 18h | Sábado: 8h às 13h',
-      instagramUrl: 'https://instagram.com/caririchuteiras',
-      tiktokUrl: 'https://tiktok.com/@caririchuteiras',
+      instagramUrl:
+        'https://www.instagram.com/cariri__chuteiras?igsh=eHAyb3NuNXpyZzNn',
+      tiktokUrl:
+        'https://www.tiktok.com/@cariri__chuteiras01?_r=1&_t=ZS-977iiJHszTQ',
       googleMapsEmbed: '',
       promoBarMessages: [
         '🚚 Entregamos para todo o Brasil',
