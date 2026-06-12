@@ -2,11 +2,14 @@
 
 import crypto from 'crypto'
 import { headers } from 'next/headers'
+import { revalidatePath } from 'next/cache'
 import { z } from 'zod'
 import { prisma } from '@/lib/prisma'
+import { uploadReviewImage } from '@/lib/storage/upload-review-image'
 
 const ReviewSchema = z.object({
   productId: z.string().min(1),
+  productSlug: z.string().min(1),
   customerName: z.string().min(2, 'Nome muito curto').max(80),
   city: z.string().min(2).max(80).optional().nullable(),
   rating: z.number().int().min(1).max(5),
@@ -24,6 +27,7 @@ export async function submitReviewAction(
   try {
     const parsed = ReviewSchema.safeParse({
       productId: formData.get('productId'),
+      productSlug: formData.get('productSlug'),
       customerName: String(formData.get('customerName') ?? '').trim(),
       city: String(formData.get('city') ?? '').trim() || null,
       rating: Number(formData.get('rating') ?? 0),
@@ -36,9 +40,8 @@ export async function submitReviewAction(
       return { ok: false, error: issue?.message ?? 'Dados inválidos' }
     }
 
-    const { honeypot, productId, ...data } = parsed.data
+    const { honeypot, productId, productSlug, ...data } = parsed.data
     if (honeypot && honeypot.length > 0) {
-      // Bot detectado — fingir sucesso silenciosamente
       return { ok: true, message: 'Avaliação enviada para moderação.' }
     }
 
@@ -74,6 +77,16 @@ export async function submitReviewAction(
       }
     }
 
+    let imageUrl: string | null = null
+    const imageFile = formData.get('image')
+    if (imageFile && imageFile instanceof File && imageFile.size > 0) {
+      const upload = await uploadReviewImage(imageFile, productId)
+      if (!upload.ok) {
+        return { ok: false, error: upload.error }
+      }
+      imageUrl = upload.url
+    }
+
     await prisma.review.create({
       data: {
         productId,
@@ -81,14 +94,21 @@ export async function submitReviewAction(
         city: data.city,
         rating: data.rating,
         comment: data.comment,
+        imageUrl,
         isApproved: false,
+        isVerifiedPurchase: false,
         ipHash,
       },
     })
 
+    revalidatePath(`/produto/${productSlug}`)
+    revalidatePath('/avaliacoes')
+
     return {
       ok: true,
-      message: 'Avaliação enviada! Será publicada após aprovação.',
+      message: imageUrl
+        ? 'Avaliação enviada com foto! Será publicada após aprovação.'
+        : 'Avaliação enviada! Será publicada após aprovação.',
     }
   } catch (error) {
     console.error('[submitReview] error:', error)

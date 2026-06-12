@@ -9,8 +9,9 @@ import { BestsellersRanking } from '@/components/public/home/bestsellers-ranking
 import { PromoBanner } from '@/components/public/home/promo-banner'
 import { NewArrivals } from '@/components/public/home/new-arrivals'
 import { BrandsStrip } from '@/components/public/home/brands-strip'
-import { Testimonials } from '@/components/public/home/testimonials'
+import { TestimonialsCarousel } from '@/components/public/home/testimonials-carousel'
 import { WhatsappCtaBlock } from '@/components/public/home/whatsapp-cta-block'
+import { getFeaturedReviews } from '@/lib/queries/reviews'
 
 // ISR — revalida o cache a cada 1h
 export const revalidate = 3600
@@ -28,7 +29,11 @@ export const metadata: Metadata = {
 }
 
 export default async function HomePage() {
-  const [data, config] = await Promise.all([getHomeData(), getSiteConfig()])
+  const [data, config, featuredReviews] = await Promise.all([
+    getHomeData(),
+    getSiteConfig(),
+    getFeaturedReviews(6),
+  ])
 
   const heroSlides: HeroSlide[] = Array.isArray(config.heroSlides)
     ? (config.heroSlides as HeroSlide[])
@@ -64,16 +69,24 @@ export default async function HomePage() {
 
       <BrandsStrip />
 
-      <Testimonials
-        testimonials={data.testimonials.map((t) => ({
-          id: t.id,
-          customerName: t.customerName,
-          city: t.city,
-          rating: t.rating,
-          comment: t.comment,
-          product: t.product,
-        }))}
-      />
+      {featuredReviews.length > 0 ? (
+        <TestimonialsCarousel
+          reviews={featuredReviews.map((r) => ({
+            id: r.id,
+            customerName: r.customerName,
+            city: r.city,
+            rating: r.rating,
+            comment: r.comment,
+            imageUrl: r.imageUrl,
+            isVerifiedPurchase: r.isVerifiedPurchase,
+            product: {
+              slug: r.product.slug,
+              name: r.product.name,
+              brand: r.product.brand,
+            },
+          }))}
+        />
+      ) : null}
 
       <WhatsappCtaBlock storeHours={config.storeHours} storeAddress={config.storeAddress} />
     </>

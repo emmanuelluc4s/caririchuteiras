@@ -1,52 +1,118 @@
 'use client'
 
 import * as React from 'react'
-import { Star, MapPin, MessageSquare } from 'lucide-react'
+import { Camera, ShieldCheck, MessageSquare, X, Star } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
 import { Label } from '@/components/ui/label'
 import { toast } from 'sonner'
+import Image from 'next/image'
 import { submitReviewAction } from '@/app/(public)/produto/[slug]/actions'
+import { compressImage } from '@/lib/storage/compress-image'
+import {
+  MAX_IMAGE_SIZE,
+  ALLOWED_TYPES,
+} from '@/lib/storage/upload-review-image'
+import { RatingDistribution } from '@/components/public/reviews/rating-distribution'
+import {
+  ReviewCard,
+  type ReviewCardData,
+} from '@/components/public/reviews/review-card'
+import { ReviewImageLightbox } from '@/components/public/reviews/review-image-lightbox'
 import { cn } from '@/lib/utils'
-
-type Review = {
-  id: string
-  customerName: string
-  city: string | null
-  rating: number
-  comment: string
-  createdAt: Date
-}
 
 type Props = {
   productId: string
-  averageRating: number
-  totalReviews: number
-  reviews: Review[]
+  productSlug: string
+  initialDistribution: Record<number, number>
+  initialAverage: number
+  initialTotal: number
+  initialReviews: ReviewCardData[]
+  totalInitialPages: number
 }
 
 export function ProductReviews({
   productId,
-  averageRating,
-  totalReviews,
-  reviews,
+  productSlug,
+  initialDistribution,
+  initialAverage,
+  initialTotal,
+  initialReviews,
+  totalInitialPages,
 }: Props) {
-  const [ratingFilter, setRatingFilter] = React.useState<number | null>(null)
+  const [items, setItems] = React.useState<ReviewCardData[]>(initialReviews)
   const [page, setPage] = React.useState(1)
-  const PAGE_SIZE = 6
+  const [totalPages, setTotalPages] = React.useState(totalInitialPages)
+  const [loading, setLoading] = React.useState(false)
 
-  const filtered = ratingFilter
-    ? reviews.filter((r) => r.rating === ratingFilter)
-    : reviews
-  const paginated = filtered.slice(0, page * PAGE_SIZE)
-  const canLoadMore = paginated.length < filtered.length
+  const [ratingFilter, setRatingFilter] = React.useState<number | null>(null)
+  const [withImageFilter, setWithImageFilter] = React.useState(false)
+  const [verifiedFilter, setVerifiedFilter] = React.useState(false)
 
-  const ratingCounts = React.useMemo(() => {
-    const counts = [0, 0, 0, 0, 0]
-    for (const r of reviews) counts[r.rating - 1]!++
-    return counts
-  }, [reviews])
+  const [lightbox, setLightbox] = React.useState<{
+    src: string
+    alt: string
+  } | null>(null)
+
+  const initialMountRef = React.useRef(true)
+
+  React.useEffect(() => {
+    // Skip primeira renderização — initialReviews já estão lá
+    if (initialMountRef.current) {
+      initialMountRef.current = false
+      return
+    }
+
+    let cancelled = false
+    setLoading(true)
+    const params = new URLSearchParams({ productId, page: '1' })
+    if (ratingFilter) params.set('rating', String(ratingFilter))
+    if (withImageFilter) params.set('withImage', '1')
+    if (verifiedFilter) params.set('verifiedOnly', '1')
+
+    fetch(`/api/reviews?${params.toString()}`)
+      .then((r) => r.json())
+      .then((data) => {
+        if (cancelled) return
+        setItems(data.items ?? [])
+        setTotalPages(data.totalPages ?? 1)
+        setPage(1)
+      })
+      .catch(() => {
+        if (!cancelled) toast.error('Erro ao carregar avaliações')
+      })
+      .finally(() => {
+        if (!cancelled) setLoading(false)
+      })
+
+    return () => {
+      cancelled = true
+    }
+  }, [productId, ratingFilter, withImageFilter, verifiedFilter])
+
+  async function loadMore() {
+    setLoading(true)
+    const next = page + 1
+    const params = new URLSearchParams({ productId, page: String(next) })
+    if (ratingFilter) params.set('rating', String(ratingFilter))
+    if (withImageFilter) params.set('withImage', '1')
+    if (verifiedFilter) params.set('verifiedOnly', '1')
+
+    try {
+      const res = await fetch(`/api/reviews?${params.toString()}`)
+      const data = await res.json()
+      setItems((prev) => [...prev, ...(data.items ?? [])])
+      setPage(next)
+      setTotalPages(data.totalPages ?? 1)
+    } catch {
+      toast.error('Erro ao carregar mais')
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const canLoadMore = page < totalPages
 
   return (
     <section className="space-y-6" aria-labelledby="reviews-heading">
@@ -58,11 +124,12 @@ export function ProductReviews({
           Avaliações
         </h2>
         <p className="text-sm text-gray-400">
-          {totalReviews} avaliação{totalReviews !== 1 ? 'ões' : ''} de quem comprou
+          {initialTotal} avaliaç{initialTotal === 1 ? 'ão' : 'ões'} de quem
+          comprou
         </p>
       </header>
 
-      {totalReviews === 0 ? (
+      {initialTotal === 0 ? (
         <div className="rounded-lg border border-border bg-bg-secondary p-8 text-center">
           <MessageSquare className="mx-auto mb-3 h-10 w-10 text-gray-600" />
           <p className="font-medium text-foreground">Seja o primeiro a avaliar</p>
@@ -71,179 +138,203 @@ export function ProductReviews({
           </p>
         </div>
       ) : (
-        <div className="grid gap-8 md:grid-cols-[300px_1fr]">
-          {/* Resumo + filtros */}
-          <div className="space-y-5">
-            <div className="rounded-lg border border-border bg-bg-secondary p-5 text-center">
-              <p className="font-display text-6xl leading-none text-neon">
-                {averageRating.toFixed(1)}
-              </p>
-              <div
-                className="my-2 flex justify-center gap-0.5"
-                aria-label={`${averageRating} de 5 estrelas`}
-              >
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star
-                    key={i}
-                    className={cn(
-                      'h-5 w-5',
-                      i < Math.round(averageRating)
-                        ? 'fill-warning text-warning'
-                        : 'text-gray-600',
-                    )}
-                  />
-                ))}
-              </div>
-              <p className="text-xs text-gray-400">
-                Baseado em {totalReviews} avaliação
-                {totalReviews !== 1 ? 'ões' : ''}
-              </p>
-            </div>
+        <>
+          <div className="space-y-5 rounded-lg border border-border bg-bg-secondary p-5 md:p-6">
+            <RatingDistribution
+              distribution={initialDistribution}
+              total={initialTotal}
+              average={initialAverage}
+              selectedRating={ratingFilter}
+              onSelectRating={setRatingFilter}
+            />
 
-            <div
-              className="space-y-2"
-              role="group"
-              aria-label="Filtrar por estrelas"
-            >
-              <button
-                type="button"
-                onClick={() => {
-                  setRatingFilter(null)
-                  setPage(1)
-                }}
-                className={cn(
-                  'flex w-full items-center justify-between rounded-md px-3 py-2 text-sm transition-colors',
-                  ratingFilter === null
-                    ? 'bg-neon/15 text-neon'
-                    : 'text-gray-100 hover:bg-bg-tertiary',
-                )}
-              >
-                <span>Todas</span>
-                <span className="text-xs text-gray-400">{totalReviews}</span>
-              </button>
-              {[5, 4, 3, 2, 1].map((r) => {
-                const count = ratingCounts[r - 1] ?? 0
-                if (count === 0) return null
-                return (
-                  <button
-                    key={r}
-                    type="button"
-                    onClick={() => {
-                      setRatingFilter(r)
-                      setPage(1)
-                    }}
-                    className={cn(
-                      'flex w-full items-center justify-between rounded-md px-3 py-2 text-sm transition-colors',
-                      ratingFilter === r
-                        ? 'bg-neon/15 text-neon'
-                        : 'text-gray-100 hover:bg-bg-tertiary',
-                    )}
-                  >
-                    <span className="flex items-center gap-1">
-                      {r}{' '}
-                      <Star className="h-3.5 w-3.5 fill-warning text-warning" />
-                    </span>
-                    <span className="text-xs text-gray-400">{count}</span>
-                  </button>
-                )
-              })}
+            <div className="flex flex-wrap gap-2 border-t border-border pt-4">
+              <FilterChip
+                active={withImageFilter}
+                onClick={() => setWithImageFilter((v) => !v)}
+                icon={<Camera className="h-3 w-3" />}
+                label="Com fotos"
+              />
+              <FilterChip
+                active={verifiedFilter}
+                onClick={() => setVerifiedFilter((v) => !v)}
+                icon={<ShieldCheck className="h-3 w-3" />}
+                label="Compradores verificados"
+              />
+              {(ratingFilter || withImageFilter || verifiedFilter) && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    setRatingFilter(null)
+                    setWithImageFilter(false)
+                    setVerifiedFilter(false)
+                  }}
+                  className="ml-auto inline-flex items-center gap-1 text-xs text-gray-400 transition-colors hover:text-danger"
+                >
+                  <X className="h-3 w-3" />
+                  Limpar filtros
+                </button>
+              )}
             </div>
           </div>
 
-          {/* Lista */}
-          <div className="space-y-4">
-            <AnimatePresence>
-              {paginated.map((review) => (
-                <motion.article
-                  key={review.id}
-                  layout
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.25 }}
-                  className="rounded-lg border border-border bg-bg-secondary p-5"
-                >
-                  <header className="mb-3 flex items-start justify-between gap-3">
-                    <div>
-                      <p className="font-semibold text-foreground">
-                        {review.customerName}
-                      </p>
-                      {review.city && (
-                        <p className="mt-0.5 flex items-center gap-1 text-xs text-gray-400">
-                          <MapPin className="h-3 w-3" />
-                          {review.city}
-                        </p>
-                      )}
-                    </div>
-                    <div
-                      className="flex shrink-0 gap-0.5"
-                      aria-label={`${review.rating} de 5 estrelas`}
-                    >
-                      {Array.from({ length: 5 }).map((_, i) => (
-                        <Star
-                          key={i}
-                          className={cn(
-                            'h-3.5 w-3.5',
-                            i < review.rating
-                              ? 'fill-warning text-warning'
-                              : 'text-gray-600',
-                          )}
-                        />
-                      ))}
-                    </div>
-                  </header>
-                  <p className="text-sm leading-relaxed text-gray-100">
-                    {review.comment}
-                  </p>
-                  <p className="mt-3 text-[10px] uppercase tracking-wider text-gray-600">
-                    {new Date(review.createdAt).toLocaleDateString('pt-BR', {
-                      day: 'numeric',
-                      month: 'short',
-                      year: 'numeric',
-                    })}
-                  </p>
-                </motion.article>
-              ))}
-            </AnimatePresence>
-
-            {canLoadMore && (
-              <div className="pt-2 text-center">
-                <Button
-                  variant="outline"
-                  onClick={() => setPage((p) => p + 1)}
-                >
-                  Carregar mais avaliações
-                </Button>
-              </div>
+          <div
+            className={cn(
+              'space-y-4 transition-opacity',
+              loading && 'opacity-50',
             )}
+          >
+            <AnimatePresence>
+              {items.length === 0 && !loading ? (
+                <div className="rounded-lg border border-border bg-bg-secondary p-8 text-center">
+                  <p className="text-sm text-gray-400">
+                    Nenhuma avaliação com esses filtros.
+                  </p>
+                </div>
+              ) : (
+                items.map((review) => (
+                  <motion.div
+                    key={review.id}
+                    layout
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <ReviewCard
+                      review={review}
+                      onImageClick={(src, alt) => setLightbox({ src, alt })}
+                    />
+                  </motion.div>
+                ))
+              )}
+            </AnimatePresence>
           </div>
-        </div>
+
+          {canLoadMore && (
+            <div className="pt-2 text-center">
+              <Button
+                variant="outline"
+                onClick={loadMore}
+                disabled={loading}
+              >
+                {loading ? 'Carregando...' : 'Carregar mais avaliações'}
+              </Button>
+            </div>
+          )}
+        </>
       )}
 
-      <ReviewForm productId={productId} />
+      <ReviewForm productId={productId} productSlug={productSlug} />
+
+      <ReviewImageLightbox
+        src={lightbox?.src ?? null}
+        alt={lightbox?.alt ?? ''}
+        onClose={() => setLightbox(null)}
+      />
     </section>
   )
 }
 
-function ReviewForm({ productId }: { productId: string }) {
+function FilterChip({
+  active,
+  onClick,
+  icon,
+  label,
+}: {
+  active: boolean
+  onClick: () => void
+  icon: React.ReactNode
+  label: string
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-pressed={active}
+      className={cn(
+        'inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-medium transition-all',
+        active
+          ? 'border-neon bg-neon/10 text-neon'
+          : 'border-border text-gray-100 hover:border-neon/40 hover:text-neon',
+      )}
+    >
+      {icon}
+      {label}
+    </button>
+  )
+}
+
+function ReviewForm({
+  productId,
+  productSlug,
+}: {
+  productId: string
+  productSlug: string
+}) {
   const [pending, setPending] = React.useState(false)
   const [rating, setRating] = React.useState(0)
   const [hoverRating, setHoverRating] = React.useState(0)
+  const [imagePreview, setImagePreview] = React.useState<string | null>(null)
+  const [imageFile, setImageFile] = React.useState<File | null>(null)
   const formRef = React.useRef<HTMLFormElement>(null)
+  const fileInputRef = React.useRef<HTMLInputElement>(null)
+
+  async function handleImageChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0]
+    if (!file) return
+
+    if (!ALLOWED_TYPES.includes(file.type)) {
+      toast.error('Tipo inválido. Use JPG, PNG ou WebP.')
+      e.target.value = ''
+      return
+    }
+    if (file.size > MAX_IMAGE_SIZE) {
+      toast.error('Imagem muito grande. Máximo 5MB.')
+      e.target.value = ''
+      return
+    }
+
+    try {
+      const compressed = await compressImage(file)
+      setImageFile(compressed)
+      const reader = new FileReader()
+      reader.onload = (ev) => setImagePreview(ev.target?.result as string)
+      reader.readAsDataURL(compressed)
+    } catch {
+      toast.error('Erro ao processar imagem')
+    }
+  }
+
+  function removeImage() {
+    setImageFile(null)
+    setImagePreview(null)
+    if (fileInputRef.current) fileInputRef.current.value = ''
+  }
 
   async function handleSubmit(formData: FormData) {
     if (rating === 0) {
       toast.error('Selecione uma nota de 1 a 5 estrelas')
       return
     }
+
     setPending(true)
     formData.set('rating', String(rating))
+    formData.set('productSlug', productSlug)
+    if (imageFile) {
+      formData.set('image', imageFile)
+    } else {
+      formData.delete('image')
+    }
+
     const result = await submitReviewAction(formData)
     setPending(false)
+
     if (result.ok) {
       toast.success(result.message)
       formRef.current?.reset()
       setRating(0)
+      removeImage()
     } else {
       toast.error(result.error)
     }
@@ -255,12 +346,12 @@ function ReviewForm({ productId }: { productId: string }) {
         Deixe sua avaliação
       </h3>
       <p className="mb-5 text-xs text-gray-400">
-        Será publicada após aprovação. Sem palavrões ou ofensas, por favor.
+        Sua avaliação será publicada após aprovação. Sem palavrões ou ofensas,
+        por favor.
       </p>
 
       <form ref={formRef} action={handleSubmit} className="space-y-4">
         <input type="hidden" name="productId" value={productId} />
-        {/* Honeypot */}
         <input
           type="text"
           name="website"
@@ -352,6 +443,52 @@ function ReviewForm({ productId }: { productId: string }) {
             className="mt-1 border-border bg-bg-primary"
             placeholder="Como foi sua experiência com o produto?"
           />
+        </div>
+
+        <div>
+          <Label className="mb-2 block text-xs uppercase tracking-wider text-gray-400">
+            Foto (opcional)
+          </Label>
+
+          {imagePreview ? (
+            <div className="relative inline-block">
+              <Image
+                src={imagePreview}
+                alt="Pré-visualização"
+                width={120}
+                height={120}
+                className="h-30 w-30 rounded-md border border-border object-cover"
+                unoptimized
+              />
+              <button
+                type="button"
+                onClick={removeImage}
+                aria-label="Remover foto"
+                className="absolute -right-2 -top-2 grid h-7 w-7 place-items-center rounded-full border border-border bg-bg-primary text-gray-400 transition-all hover:border-danger hover:bg-danger hover:text-white"
+              >
+                <X className="h-3.5 w-3.5" />
+              </button>
+            </div>
+          ) : (
+            <label
+              htmlFor="image"
+              className="inline-flex cursor-pointer items-center gap-2 rounded-md border border-dashed border-border bg-bg-primary px-4 py-3 text-sm text-gray-100 transition-all hover:border-neon hover:text-neon"
+            >
+              <Camera className="h-4 w-4" />
+              Adicionar foto
+              <input
+                ref={fileInputRef}
+                id="image"
+                type="file"
+                accept="image/jpeg,image/png,image/webp"
+                onChange={handleImageChange}
+                className="sr-only"
+              />
+            </label>
+          )}
+          <p className="mt-1 text-[10px] text-gray-500">
+            JPG, PNG ou WebP até 5MB. A imagem é comprimida automaticamente.
+          </p>
         </div>
 
         <Button

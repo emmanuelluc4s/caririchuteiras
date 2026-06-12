@@ -7,6 +7,7 @@ import {
   getProductSlugsForStaticGeneration,
 } from '@/lib/queries/product'
 import { getActiveCoupon } from '@/lib/queries/active-coupon'
+import { getRatingDistribution, listReviews } from '@/lib/queries/reviews'
 import { toProductCardData } from '@/lib/types/product-card'
 import {
   buildProductJsonLd,
@@ -88,15 +89,18 @@ export default async function ProductPage({
   const product = await getProductBySlug(slug)
   if (!product) notFound()
 
-  const [related, activeCoupon] = await Promise.all([
-    getRelatedProducts(
-      product.id,
-      product.categoryId,
-      product.brand,
-      Array.from(new Set(product.variants.map((v) => v.color))),
-    ),
-    getActiveCoupon(),
-  ])
+  const [related, activeCoupon, reviewsDistribution, reviewsList] =
+    await Promise.all([
+      getRelatedProducts(
+        product.id,
+        product.categoryId,
+        product.brand,
+        Array.from(new Set(product.variants.map((v) => v.color))),
+      ),
+      getActiveCoupon(),
+      getRatingDistribution({ productId: product.id }),
+      listReviews({ productId: product.id }, 1),
+    ])
 
   const totalStock = product.variants.reduce((sum, v) => sum + v.stock, 0)
   // Aproximação até o Módulo 15 com agregações por janela
@@ -277,19 +281,24 @@ export default async function ProductPage({
           }}
         />
 
-        {/* Avaliações */}
+        {/* Avaliações (Módulo 11) */}
         <ProductReviews
           productId={product.id}
-          averageRating={product.averageRating}
-          totalReviews={product.totalReviews}
-          reviews={product.reviews.map((r) => ({
+          productSlug={product.slug}
+          initialDistribution={reviewsDistribution.distribution}
+          initialAverage={reviewsDistribution.average}
+          initialTotal={reviewsDistribution.total}
+          initialReviews={reviewsList.items.map((r) => ({
             id: r.id,
             customerName: r.customerName,
             city: r.city,
             rating: r.rating,
             comment: r.comment,
+            imageUrl: r.imageUrl,
+            isVerifiedPurchase: r.isVerifiedPurchase,
             createdAt: r.createdAt,
           }))}
+          totalInitialPages={reviewsList.totalPages}
         />
 
         {/* Relacionados */}
