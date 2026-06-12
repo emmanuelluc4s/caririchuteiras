@@ -439,3 +439,161 @@ export const getSearchFacets = cache(async (query: string) => {
     }
   }
 })
+
+
+/* ============================================================
+   Promoções e Novidades (Módulo 09)
+   ============================================================ */
+
+export const queryPromoProducts = cache(async (filters: CatalogFilters) => {
+  const where: Prisma.ProductWhereInput = {
+    isActive: true,
+    promoPrice: { not: null },
+  }
+
+  if (filters.brands.length > 0) where.brand = { in: filters.brands }
+
+  const variantConditions: Prisma.ProductVariantWhereInput = {}
+  if (filters.colors.length > 0)
+    variantConditions.color = { in: filters.colors }
+  if (filters.sizes.length > 0) variantConditions.size = { in: filters.sizes }
+  if (filters.onlyInStock) variantConditions.stock = { gt: 0 }
+  if (Object.keys(variantConditions).length > 0) {
+    where.variants = { some: variantConditions }
+  }
+
+  const orderBy: Prisma.ProductOrderByWithRelationInput[] = (() => {
+    switch (filters.sort) {
+      case 'price-asc':
+        return [{ promoPrice: 'asc' }]
+      case 'price-desc':
+        return [{ promoPrice: 'desc' }]
+      case 'newest':
+        return [{ updatedAt: 'desc' }]
+      case 'name-asc':
+        return [{ name: 'asc' }]
+      default:
+        return [{ whatsappClicks: 'desc' }, { views: 'desc' }]
+    }
+  })()
+
+  const skip = (filters.page - 1) * PRODUCTS_PER_PAGE
+
+  try {
+    const [products, total] = await Promise.all([
+      prisma.product.findMany({
+        where,
+        orderBy,
+        skip,
+        take: PRODUCTS_PER_PAGE,
+        include: {
+          images: { take: 1, orderBy: { order: 'asc' } },
+          variants: { where: { stock: { gt: 0 } } },
+          category: { select: { name: true, slug: true } },
+        },
+      }),
+      prisma.product.count({ where }),
+    ])
+
+    return {
+      products,
+      total,
+      totalPages: Math.max(1, Math.ceil(total / PRODUCTS_PER_PAGE)),
+      currentPage: filters.page,
+    }
+  } catch {
+    return {
+      products: [],
+      total: 0,
+      totalPages: 1,
+      currentPage: filters.page,
+    }
+  }
+})
+
+export const getActiveCoupons = cache(async () => {
+  try {
+    return await prisma.coupon.findMany({
+      where: {
+        isActive: true,
+        OR: [{ validUntil: null }, { validUntil: { gt: new Date() } }],
+      },
+      orderBy: [{ validUntil: 'asc' }, { createdAt: 'desc' }],
+      take: 10,
+    })
+  } catch {
+    return []
+  }
+})
+
+export const queryNewArrivals = cache(async (filters: CatalogFilters) => {
+  const thirtyDaysAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000)
+
+  const where: Prisma.ProductWhereInput = {
+    isActive: true,
+    OR: [{ isNew: true }, { createdAt: { gte: thirtyDaysAgo } }],
+  }
+
+  if (filters.brands.length > 0) where.brand = { in: filters.brands }
+  if (filters.onlyPromo) where.promoPrice = { not: null }
+
+  const variantConditions: Prisma.ProductVariantWhereInput = {}
+  if (filters.colors.length > 0)
+    variantConditions.color = { in: filters.colors }
+  if (filters.sizes.length > 0) variantConditions.size = { in: filters.sizes }
+  if (filters.onlyInStock) variantConditions.stock = { gt: 0 }
+  if (Object.keys(variantConditions).length > 0) {
+    where.variants = { some: variantConditions }
+  }
+
+  const orderBy:
+    | Prisma.ProductOrderByWithRelationInput
+    | Prisma.ProductOrderByWithRelationInput[] = (() => {
+    switch (filters.sort) {
+      case 'price-asc':
+        return { price: 'asc' }
+      case 'price-desc':
+        return { price: 'desc' }
+      case 'name-asc':
+        return { name: 'asc' }
+      case 'best':
+        return [{ whatsappClicks: 'desc' }, { createdAt: 'desc' }]
+      case 'newest':
+      default:
+        return [{ createdAt: 'desc' }]
+    }
+  })()
+
+  const skip = (filters.page - 1) * PRODUCTS_PER_PAGE
+
+  try {
+    const [products, total] = await Promise.all([
+      prisma.product.findMany({
+        where,
+        orderBy,
+        skip,
+        take: PRODUCTS_PER_PAGE,
+        include: {
+          images: { take: 1, orderBy: { order: 'asc' } },
+          variants: { where: { stock: { gt: 0 } } },
+          category: { select: { name: true, slug: true } },
+        },
+      }),
+      prisma.product.count({ where }),
+    ])
+
+    return {
+      products,
+      total,
+      totalPages: Math.max(1, Math.ceil(total / PRODUCTS_PER_PAGE)),
+      currentPage: filters.page,
+    }
+  } catch {
+    return {
+      products: [],
+      total: 0,
+      totalPages: 1,
+      currentPage: filters.page,
+    }
+  }
+})
