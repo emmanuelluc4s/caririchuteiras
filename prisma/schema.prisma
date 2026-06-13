@@ -135,12 +135,25 @@ model WhatsappLead {
 }
 
 model AdminUser {
-  id        String   @id @default(cuid())
-  authId    String   @unique
-  email     String   @unique
-  name      String?
-  role      String   @default("admin")
-  createdAt DateTime @default(now())
+  id          String    @id @default(cuid())
+  supabaseId  String    @unique
+  email       String    @unique
+  name        String
+  avatarUrl   String?
+  role        AdminRole @default(viewer)
+  isActive    Boolean   @default(true)
+  lastLoginAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @default(now()) @updatedAt
+
+  @@index([supabaseId])
+  @@index([email])
+}
+
+enum AdminRole {
+  admin
+  editor
+  viewer
 }
 
 model AuditLog {

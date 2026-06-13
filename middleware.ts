@@ -2,7 +2,7 @@ import { type NextRequest, NextResponse } from 'next/server'
 import { updateSession } from '@/lib/supabase/middleware'
 import { prisma } from '@/lib/prisma'
 
-// Cache do status em memória (TTL 30s para evitar bater no banco a cada request)
+// Cache de manutenção (Módulo 09)
 let cachedMaintenance: { value: boolean; expiresAt: number } | null = null
 
 async function isMaintenanceMode(): Promise<boolean> {
@@ -25,7 +25,36 @@ async function isMaintenanceMode(): Promise<boolean> {
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
 
-  // Rotas que NUNCA são afetadas pelo modo manutenção
+  // ====================================================
+  // 1) PROTEÇÃO DO ADMIN (Módulo 12)
+  // ====================================================
+  if (pathname.startsWith('/admin')) {
+    const publicAdminPaths = ['/admin/login', '/admin/unauthorized']
+    const isPublicAdminPath = publicAdminPaths.some(
+      (p) => pathname === p || pathname.startsWith(`${p}/`),
+    )
+
+    const { response, user } = await updateSession(request)
+
+    if (isPublicAdminPath) {
+      if (pathname === '/admin/login' && user) {
+        return NextResponse.redirect(new URL('/admin', request.url))
+      }
+      return response
+    }
+
+    if (!user) {
+      const url = new URL('/admin/login', request.url)
+      url.searchParams.set('redirect', pathname)
+      return NextResponse.redirect(url)
+    }
+
+    return response
+  }
+
+  // ====================================================
+  // 2) MODO MANUTENÇÃO (Módulo 09)
+  // ====================================================
   const bypassPaths = ['/admin', '/api', '/manutencao', '/_next', '/favicon']
   const bypassed = bypassPaths.some(
     (p) => pathname === p || pathname.startsWith(`${p}/`),
@@ -38,7 +67,6 @@ export async function middleware(request: NextRequest) {
     }
   }
 
-  // Se modo manutenção desligado e usuário tá em /manutencao, mandar pra home
   if (pathname === '/manutencao') {
     const isMaintenance = await isMaintenanceMode()
     if (!isMaintenance) {
@@ -46,7 +74,8 @@ export async function middleware(request: NextRequest) {
     }
   }
 
-  return await updateSession(request)
+  const { response } = await updateSession(request)
+  return response
 }
 
 export const config = {
