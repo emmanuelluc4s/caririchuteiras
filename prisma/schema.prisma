@@ -128,16 +128,20 @@ model Review {
 }
 
 model WhatsappLead {
-  id         String   @id @default(cuid())
-  items      Json
-  couponCode String?
-  userAgent  String?
-  referrer   String?
-  device     String?
-  city       String?
-  createdAt  DateTime @default(now())
+  id            String   @id @default(cuid())
+  items         Json
+  customerName  String?
+  customerPhone String?
+  source        String?
+  couponCode    String?
+  userAgent     String?
+  referrer      String?
+  device        String?
+  city          String?
+  createdAt     DateTime @default(now())
 
   @@index([createdAt])
+  @@index([source, createdAt])
 }
 
 model AdminUser {

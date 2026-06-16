@@ -68,25 +68,29 @@ export default async function AdminDashboardPage() {
         />
       </section>
 
-      <section className="rounded-2xl border border-neon/30 bg-bg-secondary p-6 md:p-8">
-        <h2 className="mb-3 font-display text-xl uppercase tracking-tight md:text-2xl">
-          🚧 Painel em construção
-        </h2>
-        <p className="mb-4 text-sm text-gray-100">
-          Esta é a versão inicial do painel. Os módulos abaixo serão liberados
-          em breve:
-        </p>
-        <ul className="mb-5 grid gap-2 text-sm text-gray-100 sm:grid-cols-2">
-          <li>📦 CRUD completo de produtos (Módulo 13)</li>
-          <li>🗂️ Categorias, cupons e avaliações (Módulo 14)</li>
-          <li>📊 Dashboard com gráficos reais (Módulo 15)</li>
-          <li>⚙️ Configurações e usuários (Módulo 16)</li>
-        </ul>
-        <Button asChild>
-          <Link href="/" target="_blank" rel="noopener noreferrer">
-            Ver site público
-          </Link>
-        </Button>
+      <section className="flex flex-col items-start gap-4 rounded-2xl border border-neon/30 bg-bg-secondary p-6 md:flex-row md:items-center md:justify-between md:p-8">
+        <div>
+          <h2 className="font-display text-xl uppercase tracking-tight md:text-2xl">
+            Analytics completo
+          </h2>
+          <p className="mt-1 max-w-md text-sm text-gray-100">
+            KPIs, conversão WhatsApp, top produtos, termos buscados e leads —
+            tudo com seletor de período e exportação CSV.
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-2">
+          <Button asChild>
+            <Link href="/admin/dashboard">
+              <BarChart3 className="h-4 w-4" />
+              Ver analytics completo
+            </Link>
+          </Button>
+          <Button asChild variant="outline">
+            <Link href="/" target="_blank" rel="noopener noreferrer">
+              Ver site público
+            </Link>
+          </Button>
+        </div>
       </section>
     </div>
   )
