@@ -11,6 +11,7 @@ import {
   Tag,
   MessageSquare,
   BarChart3,
+  FileBarChart,
   Settings,
   Users,
   History,
@@ -59,6 +60,12 @@ const NAV_ITEMS: NavItem[] = [
     href: '/admin/dashboard',
     label: 'Analytics',
     icon: BarChart3,
+    permission: 'dashboard.view',
+  },
+  {
+    href: '/admin/relatorios',
+    label: 'Relatórios',
+    icon: FileBarChart,
     permission: 'dashboard.view',
   },
   {

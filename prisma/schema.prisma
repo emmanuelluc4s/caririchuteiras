@@ -198,16 +198,41 @@ model SiteEvent {
 }
 
 model SiteConfig {
-  id                 String   @id @default("singleton")
-  whatsappNumber     String
-  storeAddress       String?
-  storeHours         String?
-  instagramUrl       String?
-  tiktokUrl          String?
-  googleMapsEmbed    String?
-  promoBarMessages   Json
-  isMaintenanceMode  Boolean  @default(false)
-  maintenanceMessage String?
-  heroSlides         Json
-  updatedAt          DateTime @updatedAt
+  id                     String   @id @default("singleton")
+  // Identidade
+  storeName              String   @default("Cariri Chuteiras")
+  storeTagline           String?
+  storeDescription       String?  @db.Text
+  storeEmail             String?
+  storeCity              String?
+  storeAddress           String?
+  // WhatsApp
+  whatsappNumber         String
+  storeHours             String?
+  whatsappBusinessHours  String?
+  whatsappWelcomeMessage String?  @db.Text
+  // Redes sociais
+  instagramUrl           String?
+  facebookUrl            String?
+  tiktokUrl              String?
+  youtubeUrl             String?
+  twitterUrl             String?
+  googleMapsEmbed        String?
+  // Promo bar
+  promoBarMessages       Json
+  promoBarEnabled        Boolean  @default(true)
+  // Integrações
+  metaPixelId            String?
+  ga4Id                  String?
+  clarityId              String?
+  // SEO global
+  defaultMetaTitle       String?
+  defaultMetaDescription String?
+  ogImageUrl             String?
+  // Manutenção
+  isMaintenanceMode      Boolean  @default(false)
+  maintenanceMessage     String?  @db.Text
+  // Hero
+  heroSlides             Json
+  updatedAt              DateTime @updatedAt
 }
