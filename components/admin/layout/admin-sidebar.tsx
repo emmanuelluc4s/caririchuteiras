@@ -85,12 +85,22 @@ type Props = {
   role: AdminRole
   collapsed: boolean
   onCollapseToggle: () => void
+  pendingReviewsCount?: number
 }
 
-export function AdminSidebar({ role, collapsed, onCollapseToggle }: Props) {
+export function AdminSidebar({
+  role,
+  collapsed,
+  onCollapseToggle,
+  pendingReviewsCount,
+}: Props) {
   const pathname = usePathname()
   const visibleItems = NAV_ITEMS.filter(
     (item) => !item.permission || can(role, item.permission),
+  ).map((item) =>
+    item.href === '/admin/avaliacoes'
+      ? { ...item, badge: pendingReviewsCount }
+      : item,
   )
 
   return (

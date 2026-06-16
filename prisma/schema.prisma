@@ -80,7 +80,8 @@ model Category {
   id              String    @id @default(cuid())
   slug            String    @unique
   name            String
-  image           String?
+  description     String?   @db.Text
+  imageUrl        String?
   metaTitle       String?
   metaDescription String?
   order           Int       @default(0)
@@ -94,11 +95,16 @@ model Coupon {
   description   String?
   discountType  String
   discountValue Decimal   @db.Decimal(10, 2)
+  minPurchase   Decimal?  @db.Decimal(10, 2)
+  validFrom     DateTime?
   validUntil    DateTime?
   maxUses       Int?
-  uses          Int       @default(0)
+  usageCount    Int       @default(0)
   isActive      Boolean   @default(true)
   createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @default(now()) @updatedAt
+
+  @@index([isActive, validUntil])
 }
 
 model Review {

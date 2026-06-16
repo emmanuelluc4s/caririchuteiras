@@ -77,7 +77,7 @@ export default async function CategoryPage({
       <CategoryHero
         name={category.name}
         productsCount={catalog.total}
-        image={category.image}
+        image={category.imageUrl}
       />
 
       <div className="mx-auto max-w-7xl px-4 py-8 md:px-6 md:py-12">

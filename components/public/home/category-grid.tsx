@@ -9,7 +9,7 @@ type Category = {
   id: string
   slug: string
   name: string
-  image: string | null
+  imageUrl: string | null
 }
 
 const FALLBACK_IMAGES = [
@@ -70,7 +70,7 @@ function CategoryCard({
   fallbackImage: string
   index: number
 }) {
-  const imageUrl = category.image ?? fallbackImage
+  const imageUrl = category.imageUrl ?? fallbackImage
 
   return (
     <motion.div

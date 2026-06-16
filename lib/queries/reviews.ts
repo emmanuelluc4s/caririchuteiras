@@ -208,3 +208,73 @@ export const getFeaturedReviews = cache(async (limit = 6) => {
     return []
   }
 })
+
+export type AdminReviewFilters = {
+  search?: string
+  status?: 'pending' | 'approved' | 'all'
+  rating?: number
+  withImage?: boolean
+  verified?: 'all' | 'yes' | 'no'
+}
+
+export const ADMIN_REVIEWS_PER_PAGE = 12
+
+export async function listAdminReviews(
+  filters: AdminReviewFilters,
+  page: number = 1,
+) {
+  const where: Prisma.ReviewWhereInput = {}
+
+  if (filters.status === 'pending') where.isApproved = false
+  if (filters.status === 'approved') where.isApproved = true
+  if (filters.rating) where.rating = filters.rating
+  if (filters.withImage) where.imageUrl = { not: null }
+  if (filters.verified === 'yes') where.isVerifiedPurchase = true
+  if (filters.verified === 'no') where.isVerifiedPurchase = false
+
+  if (filters.search) {
+    where.OR = [
+      { customerName: { contains: filters.search, mode: 'insensitive' } },
+      { comment: { contains: filters.search, mode: 'insensitive' } },
+      {
+        product: { name: { contains: filters.search, mode: 'insensitive' } },
+      },
+    ]
+  }
+
+  const skip = (page - 1) * ADMIN_REVIEWS_PER_PAGE
+
+  const [items, total, pending, approved, withImage, verified] =
+    await Promise.all([
+      prisma.review.findMany({
+        where,
+        orderBy: [{ isApproved: 'asc' }, { createdAt: 'desc' }],
+        skip,
+        take: ADMIN_REVIEWS_PER_PAGE,
+        include: {
+          product: {
+            select: {
+              id: true,
+              slug: true,
+              name: true,
+              brand: true,
+              images: { take: 1, orderBy: { order: 'asc' } },
+            },
+          },
+        },
+      }),
+      prisma.review.count({ where }),
+      prisma.review.count({ where: { isApproved: false } }),
+      prisma.review.count({ where: { isApproved: true } }),
+      prisma.review.count({ where: { imageUrl: { not: null } } }),
+      prisma.review.count({ where: { isVerifiedPurchase: true } }),
+    ])
+
+  return {
+    items,
+    total,
+    totalPages: Math.max(1, Math.ceil(total / ADMIN_REVIEWS_PER_PAGE)),
+    currentPage: page,
+    stats: { pending, approved, withImage, verified },
+  }
+}

@@ -10,9 +10,14 @@ const COLLAPSED_KEY = 'cc-admin-sidebar-collapsed'
 type Props = {
   admin: AdminUser
   children: React.ReactNode
+  pendingReviewsCount?: number
 }
 
-export function AdminLayoutShell({ admin, children }: Props) {
+export function AdminLayoutShell({
+  admin,
+  children,
+  pendingReviewsCount,
+}: Props) {
   const [collapsed, setCollapsed] = React.useState(false)
 
   React.useEffect(() => {
@@ -38,6 +43,7 @@ export function AdminLayoutShell({ admin, children }: Props) {
         role={admin.role}
         collapsed={collapsed}
         onCollapseToggle={toggleCollapsed}
+        pendingReviewsCount={pendingReviewsCount}
       />
       <div className="flex min-w-0 flex-1 flex-col">
         <AdminHeader admin={admin} />
