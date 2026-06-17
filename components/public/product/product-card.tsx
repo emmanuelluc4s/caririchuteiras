@@ -2,6 +2,7 @@
 
 import * as React from 'react'
 import Image from 'next/image'
+import { getBlurDataURL } from '@/lib/seo/blur-placeholder'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { ShoppingBag, Eye } from 'lucide-react'
@@ -120,6 +121,8 @@ export function ProductCard({ product, className, priority = false }: Props) {
               className="object-cover"
               priority={priority}
               loading={priority ? 'eager' : 'lazy'}
+              placeholder="blur"
+              blurDataURL={getBlurDataURL(product.imageUrl)}
             />
           </motion.div>
         ) : (

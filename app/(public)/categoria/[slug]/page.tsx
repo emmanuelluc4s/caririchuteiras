@@ -14,6 +14,11 @@ import { FilterSidebar } from '@/components/public/catalog/filter-sidebar'
 import { CatalogToolbar } from '@/components/public/catalog/catalog-toolbar'
 import { ProductGrid } from '@/components/public/catalog/product-grid'
 import { Pagination } from '@/components/public/catalog/pagination'
+import { JsonLd } from '@/components/seo/json-ld'
+import { getBreadcrumbSchema } from '@/lib/seo/structured-data'
+
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://cariri-chuteiras.vercel.app'
 
 export const revalidate = 3600
 
@@ -72,8 +77,17 @@ export default async function CategoryPage({
     getCategoryFacets(slug),
   ])
 
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Início', url: SITE_URL },
+    {
+      name: category.name,
+      url: `${SITE_URL}/categoria/${category.slug}`,
+    },
+  ])
+
   return (
     <>
+      <JsonLd data={breadcrumbSchema} id="schema-breadcrumb-category" />
       <CategoryHero
         name={category.name}
         productsCount={catalog.total}

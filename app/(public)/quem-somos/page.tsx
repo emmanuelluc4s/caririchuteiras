@@ -3,9 +3,39 @@ import Link from 'next/link'
 import { Trophy, Heart, Shield, Sparkles, MessageCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { PageHero } from '@/components/public/static/page-hero'
+import { JsonLd } from '@/components/seo/json-ld'
+import { getFAQSchema } from '@/lib/seo/structured-data'
 import { getSiteConfig } from '@/lib/site-config'
 import { buildWhatsappUrl } from '@/lib/whatsapp/build-message'
 import { prisma } from '@/lib/prisma'
+
+const FAQS = [
+  {
+    question: 'Vocês entregam para todo o Cariri?',
+    answer:
+      'Sim! Entregamos em Barbalha, Crato, Juazeiro do Norte e cidades vizinhas do Cariri. Para saber prazo e frete da sua cidade, fale conosco no WhatsApp.',
+  },
+  {
+    question: 'Posso experimentar a chuteira antes de comprar?',
+    answer:
+      'Sim. Atendemos presencialmente em Barbalha — agende pelo WhatsApp e venha conhecer toda a coleção.',
+  },
+  {
+    question: 'Quais formas de pagamento aceitam?',
+    answer:
+      'Aceitamos PIX, dinheiro e cartões. A combinação final é feita diretamente no WhatsApp ou na loja.',
+  },
+  {
+    question: 'Trabalham com produtos originais?',
+    answer:
+      'Sim. Trabalhamos apenas com produtos originais das marcas Nike, Adidas, Puma, Penalty, Topper e Umbro.',
+  },
+  {
+    question: 'Como funciona a garantia?',
+    answer:
+      'A garantia segue o padrão da marca para defeitos de fabricação. Em caso de problemas, entre em contato no WhatsApp que orientamos o processo de troca.',
+  },
+]
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
@@ -240,6 +270,39 @@ export default async function QuemSomosPage() {
           </div>
         </div>
       </section>
+
+      <section className="border-t border-border bg-bg-secondary py-12 md:py-16">
+        <div className="mx-auto max-w-3xl space-y-6 px-4 md:px-6">
+          <header className="space-y-1 text-center">
+            <p className="text-xs uppercase tracking-[0.3em] text-neon">
+              FAQ
+            </p>
+            <h2 className="font-display text-3xl uppercase leading-tight tracking-tight md:text-5xl">
+              Perguntas <span className="text-neon">frequentes</span>
+            </h2>
+          </header>
+          <div className="space-y-3">
+            {FAQS.map((faq) => (
+              <details
+                key={faq.question}
+                className="group rounded-lg border border-border bg-bg-primary"
+              >
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-sm font-semibold">
+                  <span>{faq.question}</span>
+                  <span className="text-2xl text-neon transition-transform group-open:rotate-45">
+                    +
+                  </span>
+                </summary>
+                <p className="px-5 pb-4 text-sm leading-relaxed text-gray-100">
+                  {faq.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <JsonLd data={getFAQSchema(FAQS)} id="schema-faq" />
     </>
   )
 }
