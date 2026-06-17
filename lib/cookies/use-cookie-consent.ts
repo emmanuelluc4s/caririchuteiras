@@ -39,6 +39,13 @@ export function useCookieConsent() {
     const payload: StoredConsent = { value, timestamp: Date.now() }
     localStorage.setItem(STORAGE_KEY, JSON.stringify(payload))
     setConsent(value)
+    try {
+      window.dispatchEvent(
+        new CustomEvent('cc-consent-changed', { detail: value }),
+      )
+    } catch {
+      // browsers very old podem não suportar
+    }
   }
 
   return {

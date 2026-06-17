@@ -152,7 +152,14 @@ export default async function ProductPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      <ProductViewTracker productId={product.id} slug={product.slug} />
+      <ProductViewTracker
+        productId={product.id}
+        slug={product.slug}
+        productName={product.name}
+        productPrice={Number(product.promoPrice ?? product.price)}
+        brand={product.brand}
+        category={product.category.name}
+      />
       <RecentlyViewedTracker
         productId={product.id}
         slug={product.slug}

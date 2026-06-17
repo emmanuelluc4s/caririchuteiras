@@ -9,6 +9,8 @@ import { CompareBottomBarWrapper } from '@/components/public/compare/compare-bot
 import { ExitIntentModal } from '@/components/public/conversion/exit-intent-modal'
 import { QuickViewModal } from '@/components/public/quick-view/quick-view-modal'
 import { RecentlyViewedCarousel } from '@/components/public/recently-viewed/recently-viewed-carousel'
+import { AnalyticsProvider } from '@/components/analytics/analytics-provider'
+import { AnalyticsDebugOverlay } from '@/components/analytics/analytics-debug-overlay'
 import { getSiteConfig } from '@/lib/site-config'
 import {
   getPopularSearches,
@@ -40,7 +42,11 @@ export default async function PublicLayout({
   }))
 
   return (
-    <>
+    <AnalyticsProvider
+      metaPixelId={config.metaPixelId ?? null}
+      ga4Id={config.ga4Id ?? null}
+      clarityId={config.clarityId ?? null}
+    >
       <PromoBar messages={promoMessages} />
       <Header whatsappNumber={config.whatsappNumber} />
 
@@ -69,6 +75,9 @@ export default async function PublicLayout({
       <ExitIntentModal />
 
       <CookieBanner />
-    </>
+
+      {/* Debug overlay — só ativo com ?debug=analytics na URL (Módulo 17) */}
+      <AnalyticsDebugOverlay />
+    </AnalyticsProvider>
   )
 }
