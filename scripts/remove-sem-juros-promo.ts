@@ -14,7 +14,8 @@ async function main() {
     ? (cfg.promoBarMessages as unknown[])
     : []
   const filtered = current.filter(
-    (m) => typeof m === 'string' && !m.toLowerCase().includes('sem juros'),
+    (m): m is string =>
+      typeof m === 'string' && !m.toLowerCase().includes('sem juros'),
   )
   console.log(`Mensagens antes: ${current.length} | depois: ${filtered.length}`)
   if (current.length === filtered.length) {
