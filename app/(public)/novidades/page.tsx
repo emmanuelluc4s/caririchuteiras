@@ -9,6 +9,7 @@ import { CatalogToolbar } from '@/components/public/catalog/catalog-toolbar'
 import { ProductGrid } from '@/components/public/catalog/product-grid'
 import { Pagination } from '@/components/public/catalog/pagination'
 
+export const dynamic = 'force-dynamic'
 export const revalidate = 600
 
 export const metadata: Metadata = {

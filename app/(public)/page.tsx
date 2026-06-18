@@ -13,7 +13,8 @@ import { TestimonialsCarousel } from '@/components/public/home/testimonials-caro
 import { WhatsappCtaBlock } from '@/components/public/home/whatsapp-cta-block'
 import { getFeaturedReviews } from '@/lib/queries/reviews'
 
-// ISR — revalida o cache a cada 1h
+// Não pré-renderizar no build (depende do DB) — re-render a cada 1h em prod
+export const dynamic = 'force-dynamic'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
