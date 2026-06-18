@@ -620,7 +620,7 @@ function PromoMessageRow({
         onChange={(e) => onChange(e.target.value)}
         disabled={disabled}
         maxLength={120}
-        placeholder="Ex: FRETE GRÁTIS no Cariri • Confira!"
+        placeholder="Ex: Entregamos para todo o Brasil • Confira!"
         className="h-10 flex-1 rounded-md border border-border bg-bg-primary px-3 text-sm focus:border-neon focus:outline-none disabled:opacity-50"
       />
       <button

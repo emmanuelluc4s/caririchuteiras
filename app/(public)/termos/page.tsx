@@ -108,8 +108,9 @@ export default function TermosPage() {
             <h2>4. Entrega e retirada</h2>
             <ul>
               <li>
-                Realizamos entregas para a região do Cariri (Barbalha,
-                Juazeiro do Norte, Crato, Missão Velha e arredores).
+                Realizamos entregas para todo o Brasil. Na região do Cariri
+                (Barbalha, Juazeiro do Norte, Crato, Missão Velha e arredores)
+                a entrega é mais rápida.
               </li>
               <li>
                 Prazos e valores de frete são informados durante a conversa no

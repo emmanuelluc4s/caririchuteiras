@@ -84,12 +84,18 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR" className={`${inter.variable} ${anton.variable}`} suppressHydrationWarning>
+    <html
+      lang="pt-BR"
+      data-theme="dark"
+      className={`${inter.variable} ${anton.variable}`}
+      suppressHydrationWarning
+    >
       <body className="font-body bg-bg-primary text-foreground min-h-screen antialiased">
         <ThemeProvider
           attribute="data-theme"
           defaultTheme="dark"
-          enableSystem
+          forcedTheme="dark"
+          enableSystem={false}
           disableTransitionOnChange={false}
           storageKey="cc-theme"
         >

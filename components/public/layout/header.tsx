@@ -6,7 +6,6 @@ import { usePathname } from 'next/navigation'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { Logo } from './logo'
 import { SearchBar } from '@/components/public/search/search-bar'
-import { ThemeToggle } from './theme-toggle'
 import { WhatsappHeaderIcon } from './whatsapp-header-icon'
 import { MobileMenu } from './mobile-menu'
 import { RecentlyViewedDropdown } from '@/components/public/recently-viewed/recently-viewed-dropdown'
@@ -69,7 +68,6 @@ export function Header({ whatsappNumber }: Props) {
             })}
           </nav>
 
-          <ThemeToggle />
           <RecentlyViewedDropdown />
           <WhatsappHeaderIcon whatsappNumber={whatsappNumber} />
         </div>

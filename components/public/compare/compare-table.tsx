@@ -269,9 +269,7 @@ export function CompareTable({ products }: Props) {
                       <strong className="text-foreground">
                         {formatBRL(finalPrice / p.installments)}
                       </strong>
-                      {p.installmentFree && (
-                        <span className="block text-success">sem juros</span>
-                      )}
+                      <span className="block text-gray-400">no cartão</span>
                     </p>
                   ) : (
                     <p className="text-xs text-gray-400">À vista</p>

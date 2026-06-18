@@ -228,7 +228,7 @@ export function ProductCard({ product, className, priority = false }: Props) {
             </span>
           </div>
           <p className="mt-0.5 text-[10px] text-gray-400">
-            ou 10x de {formatBRL(finalPrice / 10)} sem juros
+            ou 10x de {formatBRL(finalPrice / 10)} no cartão
           </p>
           {product.totalStock != null &&
             product.totalStock > 0 &&

@@ -5,14 +5,12 @@ type Props = {
   price: number
   promoPrice?: number | null
   installments?: number | null
-  installmentFree?: boolean
 }
 
 export function ProductPriceBlock({
   price,
   promoPrice,
   installments,
-  installmentFree,
 }: Props) {
   const finalPrice = promoPrice ?? price
   const hasDiscount = promoPrice != null && promoPrice < price
@@ -51,7 +49,7 @@ export function ProductPriceBlock({
           <strong className="text-foreground">
             {installments}x de {formatBRL(finalPrice / installments)}
           </strong>{' '}
-          {installmentFree && <span className="text-success">sem juros</span>}
+          <span className="text-gray-400">no cartão</span>
         </p>
       )}
 

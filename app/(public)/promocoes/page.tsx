@@ -19,7 +19,7 @@ export const revalidate = 600
 export const metadata: Metadata = {
   title: 'Promoções',
   description:
-    'Confira as ofertas e cupons ativos da Cariri Chuteiras. Descontos especiais nas melhores marcas esportivas com entrega para todo o Cariri.',
+    'Confira as ofertas e cupons ativos da Cariri Chuteiras. Descontos especiais nas melhores marcas esportivas com entrega para todo o Brasil.',
   alternates: { canonical: '/promocoes' },
   openGraph: {
     title: 'Promoções — Cariri Chuteiras',

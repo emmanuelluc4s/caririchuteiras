@@ -158,7 +158,7 @@ export function ExitIntentModal() {
                   Resposta rápida no horário comercial
                 </BenefitLine>
                 <BenefitLine icon={<Truck className="h-4 w-4 text-neon" />}>
-                  Entrega para todo o Cariri
+                  Entrega para todo o Brasil
                 </BenefitLine>
                 <BenefitLine icon={<Sparkles className="h-4 w-4 text-neon" />}>
                   Cupons exclusivos pra quem conversa

@@ -276,7 +276,6 @@ async function main() {
         '🚚 Entregamos para todo o Brasil',
         '⚽ Chuteiras das melhores marcas',
         '🔥 Promoções exclusivas toda semana',
-        '💰 10x sem juros em produtos selecionados',
         '🏆 Novidades chegando toda semana',
       ],
       isMaintenanceMode: false,

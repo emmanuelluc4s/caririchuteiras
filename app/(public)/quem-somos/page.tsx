@@ -11,9 +11,9 @@ import { prisma } from '@/lib/prisma'
 
 const FAQS = [
   {
-    question: 'Vocês entregam para todo o Cariri?',
+    question: 'Vocês entregam para todo o Brasil?',
     answer:
-      'Sim! Entregamos em Barbalha, Crato, Juazeiro do Norte e cidades vizinhas do Cariri. Para saber prazo e frete da sua cidade, fale conosco no WhatsApp.',
+      'Sim! Entregamos para todo o Brasil. No Cariri (Barbalha, Crato, Juazeiro do Norte e cidades vizinhas) a entrega é mais rápida. Para saber prazo e frete da sua cidade, fale conosco no WhatsApp.',
   },
   {
     question: 'Posso experimentar a chuteira antes de comprar?',

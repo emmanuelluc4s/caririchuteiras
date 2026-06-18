@@ -83,7 +83,7 @@ export function Footer({ siteConfig }: Props) {
             <Logo variant="horizontal" width={180} height={45} />
             <p className="text-sm leading-relaxed text-gray-400">
               A maior loja esportiva do Cariri. Chuteiras, tênis, camisas e acessórios das
-              melhores marcas com entrega para toda a região.
+              melhores marcas com entrega para todo o Brasil.
             </p>
             <div className="flex gap-3">
               {siteConfig.instagramUrl && (

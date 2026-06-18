@@ -376,9 +376,7 @@ function QuickViewBody({
             <p className="text-xs text-gray-100">
               {product.installments}x de{' '}
               {formatBRL(finalPrice / product.installments)}{' '}
-              {product.installmentFree && (
-                <span className="text-success">sem juros</span>
-              )}
+              <span className="text-gray-400">no cartão</span>
             </p>
           )}
         </div>

@@ -97,7 +97,7 @@ export function ProductDescription({ description, attributes }: Props) {
         </AccordionTrigger>
         <AccordionContent>
           <ul className="space-y-2 text-sm text-gray-100">
-            <li>🚚 Entregamos para todo o Cariri</li>
+            <li>🚚 Entregamos para todo o Brasil</li>
             <li>📍 Retirada na loja física em Barbalha/CE</li>
             <li>💬 Negociação de frete e prazos pelo WhatsApp</li>
             <li>✅ Garantia de 3 meses contra defeitos de fabricação</li>

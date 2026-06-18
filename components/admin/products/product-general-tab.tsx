@@ -217,19 +217,6 @@ export function ProductGeneralTab({
             />
           </FieldGroup>
 
-          <FieldGroup label="Parcelamento sem juros?">
-            <div className="flex h-10 items-center gap-2">
-              <Switch
-                checked={values.installmentFree}
-                onCheckedChange={(v) => onChange({ installmentFree: v })}
-              />
-              <span className="text-sm text-gray-100">
-                {values.installmentFree
-                  ? 'Sim, sem juros'
-                  : 'Com juros (padrão)'}
-              </span>
-            </div>
-          </FieldGroup>
         </div>
       </Card>
 

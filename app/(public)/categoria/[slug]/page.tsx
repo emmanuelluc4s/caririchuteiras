@@ -41,7 +41,7 @@ export async function generateMetadata({
   const title = category.metaTitle ?? `${category.name} — Cariri Chuteiras`
   const description =
     category.metaDescription ??
-    `Confira ${category.name} disponíveis na Cariri Chuteiras. Marcas premium, entrega para todo o Cariri, atendimento direto no WhatsApp.`
+    `Confira ${category.name} disponíveis na Cariri Chuteiras. Marcas premium, entrega para todo o Brasil, atendimento direto no WhatsApp.`
 
   return {
     title,

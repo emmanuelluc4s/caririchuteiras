@@ -18,7 +18,7 @@ export function ProductSeoTab({ values, onChange }: Props) {
       : 'Título do produto')
   const descPreview =
     values.metaDescription ??
-    `${values.brand} ${values.name} disponível na Cariri Chuteiras. Entrega para todo o Cariri.`
+    `${values.brand} ${values.name} disponível na Cariri Chuteiras. Entrega para todo o Brasil.`
 
   return (
     <div className="space-y-6">

@@ -51,7 +51,7 @@ export async function generateMetadata({
   const title = product.metaTitle ?? `${product.brand} ${product.name}`
   const description =
     product.metaDescription ??
-    `${product.brand} ${product.name} disponível na Cariri Chuteiras. ${product.category.name} com entrega para todo o Cariri.`
+    `${product.brand} ${product.name} disponível na Cariri Chuteiras. ${product.category.name} com entrega para todo o Brasil.`
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? ''
   const canonical = `/produto/${product.slug}`
@@ -255,7 +255,6 @@ export default async function ProductPage({
                 product.promoPrice ? Number(product.promoPrice) : null
               }
               installments={product.installments}
-              installmentFree={product.installmentFree}
             />
 
             <UrgencyBanner messages={urgencyMessages} />
