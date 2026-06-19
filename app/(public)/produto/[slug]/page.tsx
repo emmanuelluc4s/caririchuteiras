@@ -7,7 +7,7 @@ import {
 } from '@/lib/queries/product'
 import { getActiveCoupon } from '@/lib/queries/active-coupon'
 import { getRatingDistribution, listReviews } from '@/lib/queries/reviews'
-// import { toProductCardData } from '@/lib/types/product-card'
+import { toProductCardData } from '@/lib/types/product-card'
 import {
   buildProductJsonLd,
   buildBreadcrumbJsonLd,
@@ -22,9 +22,9 @@ import { ProductCouponHighlight } from '@/components/public/product/product-coup
 import { ProductDescription } from '@/components/public/product/product-description'
 import { ShareButtons } from '@/components/public/product/share-buttons'
 import { CompareButton } from '@/components/public/compare/compare-button'
-// import { ProductReviews } from '@/components/public/product/product-reviews'
-// import { RelatedProducts } from '@/components/public/product/related-products'
-// import { ProductPageClient } from '@/components/public/product/product-page-client'
+import { ProductReviews } from '@/components/public/product/product-reviews'
+import { RelatedProducts } from '@/components/public/product/related-products'
+import { ProductPageClient } from '@/components/public/product/product-page-client'
 import { ProductViewTracker } from '@/components/public/product/product-view-tracker'
 import { RecentlyViewedTracker } from '@/components/public/recently-viewed/recently-viewed-tracker'
 import { Badge } from '@/components/ui/badge'
@@ -229,7 +229,25 @@ export default async function ProductPage({
               />
             )}
 
-            {/* ProductPageClient removido p/ debug */}
+            <ProductPageClient
+              productId={product.id}
+              productName={product.name}
+              brand={product.brand}
+              slug={product.slug}
+              imageUrl={product.images[0]?.urlMedium}
+              price={Number(product.price)}
+              promoPrice={
+                product.promoPrice ? Number(product.promoPrice) : undefined
+              }
+              variants={product.variants.map((v) => ({
+                id: v.id,
+                color: v.color,
+                colorHex: v.colorHex,
+                size: v.size,
+                stock: v.stock,
+              }))}
+              categoryName={product.category.name}
+            />
 
             <div className="flex items-center gap-3">
               <CompareButton
@@ -261,9 +279,27 @@ export default async function ProductPage({
             origin: product.origin,
           }}
         />
-        <p>Reviews count: {reviewsDistribution.total} | {reviewsList.items.length}</p>
 
-        {/* <RelatedProducts products={related.map(toProductCardData)} /> */}
+        <ProductReviews
+          productId={product.id}
+          productSlug={product.slug}
+          initialDistribution={reviewsDistribution.distribution}
+          initialAverage={reviewsDistribution.average}
+          initialTotal={reviewsDistribution.total}
+          initialReviews={reviewsList.items.map((r) => ({
+            id: r.id,
+            customerName: r.customerName,
+            city: r.city,
+            rating: r.rating,
+            comment: r.comment,
+            imageUrl: r.imageUrl,
+            isVerifiedPurchase: r.isVerifiedPurchase,
+            createdAt: r.createdAt,
+          }))}
+          totalInitialPages={reviewsList.totalPages}
+        />
+
+        <RelatedProducts products={related.map(toProductCardData)} />
       </div>
     </>
   )
