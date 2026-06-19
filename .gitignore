@@ -76,3 +76,6 @@ logs
 /rt*.json
 /runtime*.json
 /stat*.json
+deployinfo.json
+envs.json
+prodtest.html
