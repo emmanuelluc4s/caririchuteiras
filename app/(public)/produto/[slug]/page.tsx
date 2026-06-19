@@ -7,7 +7,7 @@ import {
 } from '@/lib/queries/product'
 import { getActiveCoupon } from '@/lib/queries/active-coupon'
 import { getRatingDistribution, listReviews } from '@/lib/queries/reviews'
-import { toProductCardData } from '@/lib/types/product-card'
+// import { toProductCardData } from '@/lib/types/product-card'
 import {
   buildProductJsonLd,
   buildBreadcrumbJsonLd,
@@ -23,7 +23,7 @@ import { ProductDescription } from '@/components/public/product/product-descript
 import { ShareButtons } from '@/components/public/product/share-buttons'
 import { CompareButton } from '@/components/public/compare/compare-button'
 import { ProductReviews } from '@/components/public/product/product-reviews'
-import { RelatedProducts } from '@/components/public/product/related-products'
+// import { RelatedProducts } from '@/components/public/product/related-products'
 import { ProductPageClient } from '@/components/public/product/product-page-client'
 import { ProductViewTracker } from '@/components/public/product/product-view-tracker'
 import { RecentlyViewedTracker } from '@/components/public/recently-viewed/recently-viewed-tracker'
@@ -299,7 +299,7 @@ export default async function ProductPage({
           totalInitialPages={reviewsList.totalPages}
         />
 
-        <RelatedProducts products={related.map(toProductCardData)} />
+        {/* <RelatedProducts products={related.map(toProductCardData)} /> */}
       </div>
     </>
   )
