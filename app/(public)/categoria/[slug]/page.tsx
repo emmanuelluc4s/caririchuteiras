@@ -22,7 +22,7 @@ const SITE_URL =
 // Categoria é naturalmente dynamic por causa de searchParams (filtros),
 // mas revalidate aproveita o cache quando não tem filtros aplicados.
 export const revalidate = 3600
-export const dynamicParams = true
+export const runtime = 'nodejs'
 
 type Params = { slug: string }
 type SearchParams = Record<string, string | string[] | undefined>

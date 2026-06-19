@@ -31,7 +31,7 @@ import { Badge } from '@/components/ui/badge'
 
 // ISR lazy — gera no primeiro hit por slug, cache de 1h
 export const revalidate = 3600
-export const dynamicParams = true
+export const runtime = 'nodejs'
 
 type Params = { slug: string }
 
@@ -129,14 +129,6 @@ export default async function ProductPage({
     totalReviews: product.totalReviews,
     category: { name: product.category.name },
   })
-
-  // Enriquecer com priceValidUntil (M18 — SEO refinement)
-  const priceValidUntilDate = new Date()
-  priceValidUntilDate.setMonth(priceValidUntilDate.getMonth() + 3)
-  const offers = productSchema.offers as Record<string, unknown> | undefined
-  if (offers) {
-    offers.priceValidUntil = priceValidUntilDate.toISOString().split('T')[0]
-  }
 
   const breadcrumbSchema = buildBreadcrumbJsonLd([
     { name: 'Início', href: '/' },
