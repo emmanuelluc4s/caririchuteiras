@@ -19,12 +19,12 @@ import { ProductGallery } from '@/components/public/product/product-gallery'
 import { UrgencyBanner } from '@/components/public/product/urgency-banner'
 import { ProductPriceBlock } from '@/components/public/product/product-price-block'
 import { ProductCouponHighlight } from '@/components/public/product/product-coupon-highlight'
-import { ProductDescription } from '@/components/public/product/product-description'
+// import { ProductDescription } from '@/components/public/product/product-description'
 import { ShareButtons } from '@/components/public/product/share-buttons'
 import { CompareButton } from '@/components/public/compare/compare-button'
-import { ProductReviews } from '@/components/public/product/product-reviews'
+// import { ProductReviews } from '@/components/public/product/product-reviews'
 // import { RelatedProducts } from '@/components/public/product/related-products'
-import { ProductPageClient } from '@/components/public/product/product-page-client'
+// import { ProductPageClient } from '@/components/public/product/product-page-client'
 import { ProductViewTracker } from '@/components/public/product/product-view-tracker'
 import { RecentlyViewedTracker } from '@/components/public/recently-viewed/recently-viewed-tracker'
 import { Badge } from '@/components/ui/badge'
@@ -229,25 +229,7 @@ export default async function ProductPage({
               />
             )}
 
-            <ProductPageClient
-              productId={product.id}
-              productName={product.name}
-              brand={product.brand}
-              slug={product.slug}
-              imageUrl={product.images[0]?.urlMedium}
-              price={Number(product.price)}
-              promoPrice={
-                product.promoPrice ? Number(product.promoPrice) : undefined
-              }
-              variants={product.variants.map((v) => ({
-                id: v.id,
-                color: v.color,
-                colorHex: v.colorHex,
-                size: v.size,
-                stock: v.stock,
-              }))}
-              categoryName={product.category.name}
-            />
+            {/* ProductPageClient removido p/ debug */}
 
             <div className="flex items-center gap-3">
               <CompareButton
@@ -267,37 +249,8 @@ export default async function ProductPage({
           </div>
         </div>
 
-        <ProductDescription
-          description={product.description}
-          attributes={{
-            material: product.material,
-            weight: product.weight,
-            collar: product.collar,
-            technology: product.technology,
-            useIndication: product.useIndication,
-            warranty: product.warranty,
-            origin: product.origin,
-          }}
-        />
-
-        <ProductReviews
-          productId={product.id}
-          productSlug={product.slug}
-          initialDistribution={reviewsDistribution.distribution}
-          initialAverage={reviewsDistribution.average}
-          initialTotal={reviewsDistribution.total}
-          initialReviews={reviewsList.items.map((r) => ({
-            id: r.id,
-            customerName: r.customerName,
-            city: r.city,
-            rating: r.rating,
-            comment: r.comment,
-            imageUrl: r.imageUrl,
-            isVerifiedPurchase: r.isVerifiedPurchase,
-            createdAt: r.createdAt,
-          }))}
-          totalInitialPages={reviewsList.totalPages}
-        />
+        {/* ProductDescription e ProductReviews removidos p/ debug */}
+        <p>Reviews count: {reviewsDistribution.total} | {reviewsList.items.length}</p>
 
         {/* <RelatedProducts products={related.map(toProductCardData)} /> */}
       </div>
