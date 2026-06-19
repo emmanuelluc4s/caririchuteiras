@@ -5,7 +5,6 @@ import {
   getProductBySlug,
   getRelatedProducts,
 } from '@/lib/queries/product'
-import { prisma } from '@/lib/prisma'
 import { getActiveCoupon } from '@/lib/queries/active-coupon'
 import { getRatingDistribution, listReviews } from '@/lib/queries/reviews'
 import { toProductCardData } from '@/lib/types/product-card'
@@ -114,18 +113,6 @@ export default async function ProductPage({
     { name: product.name, href: `/produto/${product.slug}` },
   ]
 
-  const recentReviewsForSchema = await prisma.review.findMany({
-    where: { productId: product.id, isApproved: true },
-    orderBy: { createdAt: 'desc' },
-    take: 5,
-    select: {
-      customerName: true,
-      rating: true,
-      comment: true,
-      createdAt: true,
-    },
-  })
-
   const productSchema = buildProductJsonLd({
     id: product.id,
     name: product.name,
@@ -142,24 +129,12 @@ export default async function ProductPage({
     category: { name: product.category.name },
   })
 
-  // Enriquecer com priceValidUntil + reviews (M18 — SEO refinement)
+  // Enriquecer com priceValidUntil (M18 — SEO refinement)
   const priceValidUntilDate = new Date()
   priceValidUntilDate.setMonth(priceValidUntilDate.getMonth() + 3)
-  const offers = productSchema.offers as Record<string, unknown>
-  offers.priceValidUntil = priceValidUntilDate.toISOString().split('T')[0]
-
-  if (recentReviewsForSchema.length > 0) {
-    productSchema.review = recentReviewsForSchema.map((r) => ({
-      '@type': 'Review',
-      reviewRating: {
-        '@type': 'Rating',
-        ratingValue: r.rating,
-        bestRating: 5,
-      },
-      author: { '@type': 'Person', name: r.customerName },
-      reviewBody: r.comment.slice(0, 500),
-      datePublished: r.createdAt.toISOString(),
-    }))
+  const offers = productSchema.offers as Record<string, unknown> | undefined
+  if (offers) {
+    offers.priceValidUntil = priceValidUntilDate.toISOString().split('T')[0]
   }
 
   const breadcrumbSchema = buildBreadcrumbJsonLd([
