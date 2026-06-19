@@ -56,3 +56,23 @@ logs
 
 # OS
 .DS_Store
+
+# scratch files do troubleshooting (curl/diag)
+/cat.html
+/cat*.html
+/home*.html
+/p*.html
+/prod*.html
+/promo.html
+/produtotest.html
+/deploys.json
+/doms.json
+/events*.json
+/latest*.json
+/p*.json
+/patch*.json
+/proj.json
+/revert.json
+/rt*.json
+/runtime*.json
+/stat*.json
