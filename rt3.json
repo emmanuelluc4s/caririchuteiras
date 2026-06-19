@@ -1,0 +1,349 @@
+[
+{"created":1781875052863,"date":1781875052863,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875052863666758475300001","text":"Build cache uploaded: 6.182s","type":"stdout","serial":"1781875052863666758475300001","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875046677,"date":1781875046677,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875046677666758475300002","text":"Uploading build cache [222.14 MB]","type":"stdout","serial":"1781875046677666758475300002","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875046677,"date":1781875046677,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875046677666758475300001","text":"Created build cache: 25s","type":"stdout","serial":"1781875046677666758475300001","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875021646,"date":1781875021646,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875021646666758475300000","text":"Creating build cache...","type":"stdout","serial":"1781875021646666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875021533,"date":1781875021533,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875021533666758475300000","text":"Deployment completed","type":"stdout","serial":"1781875021533666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875004535,"date":1781875004535,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875004535666758475300000","text":"Deploying outputs...","type":"stdout","serial":"1781875004535666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003860,"date":1781875003860,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003860666758475300000","text":"Build Completed in /vercel/output [1m]","type":"stderr","serial":"1781875003860666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003497,"date":1781875003497,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003497666758475300004","text":"","type":"stdout","serial":"1781875003497666758475300004","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003497,"date":1781875003497,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003497666758475300003","text":"ƒ  (Dynamic)  server-rendered on demand","type":"stdout","serial":"1781875003497666758475300003","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003497,"date":1781875003497,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003497666758475300002","text":"●  (SSG)      prerendered as static HTML (uses generateStaticParams)","type":"stdout","serial":"1781875003497666758475300002","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003497,"date":1781875003497,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003497666758475300001","text":"○  (Static)   prerendered as static content","type":"stdout","serial":"1781875003497666758475300001","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003497,"date":1781875003497,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003497666758475300000","text":"","type":"stdout","serial":"1781875003497666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003496,"date":1781875003496,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003496666758475300008","text":"ƒ Proxy (Middleware)","type":"stdout","serial":"1781875003496666758475300008","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003496,"date":1781875003496,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003496666758475300007","text":"","type":"stdout","serial":"1781875003496666758475300007","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003496,"date":1781875003496,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003496666758475300006","text":"","type":"stdout","serial":"1781875003496666758475300006","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003496,"date":1781875003496,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003496666758475300005","text":"└ ○ /termos                                         1d      1y","type":"stdout","serial":"1781875003496666758475300005","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003496,"date":1781875003496,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003496666758475300004","text":"├ ○ /sitemap.xml                                    1h      1y","type":"stdout","serial":"1781875003496666758475300004","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003496,"date":1781875003496,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003496666758475300003","text":"├ ○ /robots.txt","type":"stdout","serial":"1781875003496666758475300003","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003496,"date":1781875003496,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003496666758475300002","text":"├ ƒ /quem-somos","type":"stdout","serial":"1781875003496666758475300002","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003496,"date":1781875003496,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003496666758475300001","text":"├ ƒ /promocoes","type":"stdout","serial":"1781875003496666758475300001","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003496,"date":1781875003496,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003496666758475300000","text":"├ ƒ /produto/[slug]/opengraph-image-18ii2o","type":"stdout","serial":"1781875003496666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003495,"date":1781875003495,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003495666758475300007","text":"├ ● /produto/[slug]","type":"stdout","serial":"1781875003495666758475300007","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003495,"date":1781875003495,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003495666758475300006","text":"├ ○ /privacidade                                    1d      1y","type":"stdout","serial":"1781875003495666758475300006","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003495,"date":1781875003495,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003495666758475300005","text":"├ ƒ /novidades","type":"stdout","serial":"1781875003495666758475300005","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003495,"date":1781875003495,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003495666758475300004","text":"├ ƒ /manutencao","type":"stdout","serial":"1781875003495666758475300004","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003495,"date":1781875003495,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003495666758475300003","text":"├ ○ /manifest.webmanifest","type":"stdout","serial":"1781875003495666758475300003","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003495,"date":1781875003495,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003495666758475300002","text":"├ ƒ /contato","type":"stdout","serial":"1781875003495666758475300002","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003495,"date":1781875003495,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003495666758475300001","text":"├ ƒ /comparar","type":"stdout","serial":"1781875003495666758475300001","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003495,"date":1781875003495,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003495666758475300000","text":"├ ● /categoria/[slug]","type":"stdout","serial":"1781875003495666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003494,"date":1781875003494,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003494666758475300007","text":"├ ƒ /busca","type":"stdout","serial":"1781875003494666758475300007","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003494,"date":1781875003494,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003494666758475300006","text":"├ ƒ /avaliacoes","type":"stdout","serial":"1781875003494666758475300006","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003494,"date":1781875003494,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003494666758475300005","text":"├ ƒ /api/track","type":"stdout","serial":"1781875003494666758475300005","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003494,"date":1781875003494,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003494666758475300004","text":"├ ƒ /api/search/suggestions","type":"stdout","serial":"1781875003494666758475300004","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003494,"date":1781875003494,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003494666758475300003","text":"├ ƒ /api/reviews","type":"stdout","serial":"1781875003494666758475300003","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003494,"date":1781875003494,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003494666758475300002","text":"├ ƒ /api/quick-view/[slug]","type":"stdout","serial":"1781875003494666758475300002","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003494,"date":1781875003494,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003494666758475300001","text":"├ ƒ /api/compare/thumbnails","type":"stdout","serial":"1781875003494666758475300001","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003494,"date":1781875003494,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003494666758475300000","text":"├ ƒ /admin/usuarios","type":"stdout","serial":"1781875003494666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003493,"date":1781875003493,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003493666758475300007","text":"├ ƒ /admin/unauthorized","type":"stdout","serial":"1781875003493666758475300007","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003493,"date":1781875003493,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003493666758475300006","text":"├ ƒ /admin/relatorios","type":"stdout","serial":"1781875003493666758475300006","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003493,"date":1781875003493,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003493666758475300005","text":"├ ƒ /admin/produtos/novo","type":"stdout","serial":"1781875003493666758475300005","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003493,"date":1781875003493,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003493666758475300004","text":"├ ƒ /admin/produtos/[id]/editar","type":"stdout","serial":"1781875003493666758475300004","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003493,"date":1781875003493,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003493666758475300003","text":"├ ƒ /admin/produtos","type":"stdout","serial":"1781875003493666758475300003","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003493,"date":1781875003493,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003493666758475300002","text":"├ ƒ /admin/perfil","type":"stdout","serial":"1781875003493666758475300002","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003493,"date":1781875003493,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003493666758475300001","text":"├ ƒ /admin/login","type":"stdout","serial":"1781875003493666758475300001","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003493,"date":1781875003493,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003493666758475300000","text":"├ ƒ /admin/dashboard","type":"stdout","serial":"1781875003493666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003492,"date":1781875003492,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003492666758475300006","text":"├ ƒ /admin/cupons/novo","type":"stdout","serial":"1781875003492666758475300006","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003492,"date":1781875003492,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003492666758475300005","text":"├ ƒ /admin/cupons/[id]/editar","type":"stdout","serial":"1781875003492666758475300005","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003492,"date":1781875003492,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003492666758475300004","text":"├ ƒ /admin/cupons","type":"stdout","serial":"1781875003492666758475300004","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003492,"date":1781875003492,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003492666758475300003","text":"├ ƒ /admin/configuracoes","type":"stdout","serial":"1781875003492666758475300003","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003492,"date":1781875003492,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003492666758475300002","text":"├ ƒ /admin/categorias/nova","type":"stdout","serial":"1781875003492666758475300002","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003492,"date":1781875003492,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003492666758475300001","text":"├ ƒ /admin/categorias/[id]/editar","type":"stdout","serial":"1781875003492666758475300001","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003492,"date":1781875003492,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003492666758475300000","text":"├ ƒ /admin/categorias","type":"stdout","serial":"1781875003492666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003491,"date":1781875003491,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003491666758475300004","text":"├ ƒ /admin/avaliacoes","type":"stdout","serial":"1781875003491666758475300004","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003491,"date":1781875003491,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003491666758475300003","text":"├ ƒ /admin/auditoria","type":"stdout","serial":"1781875003491666758475300003","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003491,"date":1781875003491,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003491666758475300002","text":"├ ƒ /admin","type":"stdout","serial":"1781875003491666758475300002","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003491,"date":1781875003491,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003491666758475300001","text":"├ ○ /_not-found","type":"stdout","serial":"1781875003491666758475300001","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003491,"date":1781875003491,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003491666758475300000","text":"┌ ƒ /","type":"stdout","serial":"1781875003491666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003490,"date":1781875003490,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003490666758475300000","text":"Route (app)                                 Revalidate  Expire","type":"stdout","serial":"1781875003490666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003487,"date":1781875003487,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003487666758475300000","text":"","type":"stdout","serial":"1781875003487666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003223,"date":1781875003223,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003223666758475300000","text":"  Running onBuildComplete from Vercel","type":"stdout","serial":"1781875003223666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003042,"date":1781875003042,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003042666758475300000","text":"  Finalizing page optimization ...","type":"stdout","serial":"1781875003042666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875003032,"date":1781875003032,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875003032666758475300000","text":"✓ Generating static pages using 1 worker (15/15) in 5.3s","type":"stdout","serial":"1781875003032666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875001394,"date":1781875001394,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875001394666758475300000","text":"  Generating static pages using 1 worker (11/15) \r","type":"stdout","serial":"1781875001394666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875001392,"date":1781875001392,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875001392666758475300002","text":"}","type":"stderr","serial":"1781875001392666758475300002","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875001392,"date":1781875001392,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875001392666758475300001","text":"  digest: 'DYNAMIC_SERVER_USAGE'","type":"stderr","serial":"1781875001392666758475300001","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875001392,"date":1781875001392,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875001392666758475300000","text":"  description: \"Route /admin/unauthorized couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error\",","type":"stderr","serial":"1781875001392666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875001391,"date":1781875001391,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875001391666758475300003","text":"    at j (.next/server/chunks/ssr/[root-of-the-server]__1ouzh6h._.js:1:12808) {","type":"stderr","serial":"1781875001391666758475300003","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875001391,"date":1781875001391,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875001391666758475300002","text":"    at <unknown> (.next/server/chunks/ssr/_1quw5w2._.js:1:10074)","type":"stderr","serial":"1781875001391666758475300002","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875001391,"date":1781875001391,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875001391666758475300001","text":"    at s (.next/server/chunks/ssr/_1pky0o-._.js:1:7762)","type":"stderr","serial":"1781875001391666758475300001","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875001391,"date":1781875001391,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875001391666758475300000","text":"    at n (.next/server/chunks/ssr/0ph__next_1k8ug6-._.js:1:9291)","type":"stderr","serial":"1781875001391666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875001390,"date":1781875001390,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875001390666758475300000","text":"    at y (.next/server/chunks/ssr/0ph__next_dist_0_hnvfg._.js:1:12451)","type":"stderr","serial":"1781875001390666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781875001388,"date":1781875001388,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875001388666758475300000","text":"[getCurrentAdmin] error: Error: Dynamic server usage: Route /admin/unauthorized couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error","type":"stderr","serial":"1781875001388666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."},"level":"error"}
+,
+{"created":1781875001305,"date":1781875001305,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781875001305666758475300000","text":"  Generating static pages using 1 worker (7/15) \r","type":"stdout","serial":"1781875001305666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874999254,"date":1781874999254,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874999254666758475300000","text":"  Generating static pages using 1 worker (3/15) \r","type":"stdout","serial":"1781874999254666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997920,"date":1781874997920,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997920666758475300002","text":"}","type":"stderr","serial":"1781874997920666758475300002","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997920,"date":1781874997920,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997920666758475300001","text":"  digest: 'DYNAMIC_SERVER_USAGE'","type":"stderr","serial":"1781874997920666758475300001","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997920,"date":1781874997920,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997920666758475300000","text":"  description: \"Route /admin/perfil couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error\",","type":"stderr","serial":"1781874997920666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997919,"date":1781874997919,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997919666758475300006","text":"    at f (.next/server/chunks/ssr/_1quw5w2._.js:1:11799) {","type":"stderr","serial":"1781874997919666758475300006","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997919,"date":1781874997919,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997919666758475300005","text":"    at g (.next/server/chunks/ssr/_1quw5w2._.js:1:10467)","type":"stderr","serial":"1781874997919666758475300005","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997919,"date":1781874997919,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997919666758475300004","text":"    at <unknown> (.next/server/chunks/ssr/_1quw5w2._.js:1:10074)","type":"stderr","serial":"1781874997919666758475300004","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997919,"date":1781874997919,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997919666758475300003","text":"    at s (.next/server/chunks/ssr/_1pky0o-._.js:1:7762)","type":"stderr","serial":"1781874997919666758475300003","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997919,"date":1781874997919,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997919666758475300002","text":"    at n (.next/server/chunks/ssr/0ph__next_1k8ug6-._.js:1:9291)","type":"stderr","serial":"1781874997919666758475300002","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997919,"date":1781874997919,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997919666758475300001","text":"    at y (.next/server/chunks/ssr/0ph__next_dist_0_hnvfg._.js:1:12451)","type":"stderr","serial":"1781874997919666758475300001","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997919,"date":1781874997919,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997919666758475300000","text":"[getCurrentAdmin] error: Error: Dynamic server usage: Route /admin/perfil couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error","type":"stderr","serial":"1781874997919666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."},"level":"error"}
+,
+{"created":1781874997914,"date":1781874997914,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997914666758475300008","text":"}","type":"stderr","serial":"1781874997914666758475300008","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997914,"date":1781874997914,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997914666758475300007","text":"  digest: 'DYNAMIC_SERVER_USAGE'","type":"stderr","serial":"1781874997914666758475300007","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997914,"date":1781874997914,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997914666758475300006","text":"  description: \"Route /admin couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error\",","type":"stderr","serial":"1781874997914666758475300006","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997914,"date":1781874997914,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997914666758475300005","text":"    at f (.next/server/chunks/ssr/_1quw5w2._.js:1:11799) {","type":"stderr","serial":"1781874997914666758475300005","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997914,"date":1781874997914,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997914666758475300004","text":"    at g (.next/server/chunks/ssr/_1quw5w2._.js:1:10467)","type":"stderr","serial":"1781874997914666758475300004","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997914,"date":1781874997914,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997914666758475300003","text":"    at <unknown> (.next/server/chunks/ssr/_1quw5w2._.js:1:10074)","type":"stderr","serial":"1781874997914666758475300003","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997914,"date":1781874997914,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997914666758475300002","text":"    at s (.next/server/chunks/ssr/_1pky0o-._.js:1:7762)","type":"stderr","serial":"1781874997914666758475300002","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997914,"date":1781874997914,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997914666758475300001","text":"    at n (.next/server/chunks/ssr/0ph__next_1k8ug6-._.js:1:9291)","type":"stderr","serial":"1781874997914666758475300001","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997914,"date":1781874997914,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997914666758475300000","text":"    at y (.next/server/chunks/ssr/0ph__next_dist_0_hnvfg._.js:1:12451)","type":"stderr","serial":"1781874997914666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997913,"date":1781874997913,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997913666758475300000","text":"[getCurrentAdmin] error: Error: Dynamic server usage: Route /admin couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error","type":"stderr","serial":"1781874997913666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."},"level":"error"}
+,
+{"created":1781874997833,"date":1781874997833,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997833666758475300001","text":"}","type":"stderr","serial":"1781874997833666758475300001","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997833,"date":1781874997833,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997833666758475300000","text":"  digest: 'DYNAMIC_SERVER_USAGE'","type":"stderr","serial":"1781874997833666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997832,"date":1781874997832,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997832666758475300001","text":"  description: \"Route /admin/cupons/novo couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error\",","type":"stderr","serial":"1781874997832666758475300001","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997832,"date":1781874997832,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997832666758475300000","text":"    at f (.next/server/chunks/ssr/_1quw5w2._.js:1:11799) {","type":"stderr","serial":"1781874997832666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997827,"date":1781874997827,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997827666758475300003","text":"    at g (.next/server/chunks/ssr/_1quw5w2._.js:1:10467)","type":"stderr","serial":"1781874997827666758475300003","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997827,"date":1781874997827,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997827666758475300002","text":"    at <unknown> (.next/server/chunks/ssr/_1quw5w2._.js:1:10074)","type":"stderr","serial":"1781874997827666758475300002","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997827,"date":1781874997827,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997827666758475300001","text":"    at s (.next/server/chunks/ssr/_1pky0o-._.js:1:7762)","type":"stderr","serial":"1781874997827666758475300001","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997827,"date":1781874997827,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997827666758475300000","text":"    at n (.next/server/chunks/ssr/0ph__next_1k8ug6-._.js:1:9291)","type":"stderr","serial":"1781874997827666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997826,"date":1781874997826,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997826666758475300001","text":"    at y (.next/server/chunks/ssr/0ph__next_dist_0_hnvfg._.js:1:12451)","type":"stderr","serial":"1781874997826666758475300001","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997826,"date":1781874997826,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997826666758475300000","text":"[getCurrentAdmin] error: Error: Dynamic server usage: Route /admin/cupons/novo couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error","type":"stderr","serial":"1781874997826666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."},"level":"error"}
+,
+{"created":1781874997804,"date":1781874997804,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997804666758475300000","text":"}","type":"stderr","serial":"1781874997804666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997802,"date":1781874997802,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997802666758475300000","text":"  digest: 'DYNAMIC_SERVER_USAGE'","type":"stderr","serial":"1781874997802666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997801,"date":1781874997801,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997801666758475300002","text":"  description: \"Route /admin/categorias/nova couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error\",","type":"stderr","serial":"1781874997801666758475300002","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997801,"date":1781874997801,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997801666758475300001","text":"    at f (.next/server/chunks/ssr/_1quw5w2._.js:1:11799) {","type":"stderr","serial":"1781874997801666758475300001","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997801,"date":1781874997801,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997801666758475300000","text":"    at g (.next/server/chunks/ssr/_1quw5w2._.js:1:10467)","type":"stderr","serial":"1781874997801666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997800,"date":1781874997800,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997800666758475300002","text":"    at <unknown> (.next/server/chunks/ssr/_1quw5w2._.js:1:10074)","type":"stderr","serial":"1781874997800666758475300002","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997800,"date":1781874997800,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997800666758475300001","text":"    at s (.next/server/chunks/ssr/_1pky0o-._.js:1:7762)","type":"stderr","serial":"1781874997800666758475300001","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997800,"date":1781874997800,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997800666758475300000","text":"    at n (.next/server/chunks/ssr/0ph__next_1k8ug6-._.js:1:9291)","type":"stderr","serial":"1781874997800666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997799,"date":1781874997799,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997799666758475300001","text":"    at y (.next/server/chunks/ssr/0ph__next_dist_0_hnvfg._.js:1:12451)","type":"stderr","serial":"1781874997799666758475300001","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874997799,"date":1781874997799,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997799666758475300000","text":"[getCurrentAdmin] error: Error: Dynamic server usage: Route /admin/categorias/nova couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error","type":"stderr","serial":"1781874997799666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."},"level":"error"}
+,
+{"created":1781874997745,"date":1781874997745,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874997745666758475300000","text":"  Generating static pages using 1 worker (0/15) ...","type":"stdout","serial":"1781874997745666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874996273,"date":1781874996273,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874996273666758475300000","text":"  Collecting page data using 1 worker ...","type":"stdout","serial":"1781874996273666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874996270,"date":1781874996270,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874996270666758475300000","text":"  Finished TypeScript in 14.5s ...","type":"stdout","serial":"1781874996270666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874981806,"date":1781874981806,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874981806666758475300000","text":"  Running TypeScript ...","type":"stdout","serial":"1781874981806666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874981799,"date":1781874981799,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874981799666758475300000","text":"✓ Compiled successfully in 35.6s","type":"stdout","serial":"1781874981799666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874945693,"date":1781874945693,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874945693666758475300000","text":"  Creating an optimized production build ...","type":"stdout","serial":"1781874945693666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874945655,"date":1781874945655,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874945655666758475300000","text":"⚠ The \"middleware\" file convention is deprecated. Please use \"proxy\" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy","type":"stderr","serial":"1781874945655666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."},"level":"warning"}
+,
+{"created":1781874945647,"date":1781874945647,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874945647666758475300000","text":"","type":"stdout","serial":"1781874945647666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874945646,"date":1781874945646,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874945646666758475300000","text":"▲ Next.js 16.2.7 (Turbopack)","type":"stdout","serial":"1781874945646666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874945629,"date":1781874945629,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874945629666758475300000","text":"  Applying modifyConfig from Vercel","type":"stdout","serial":"1781874945629666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874944613,"date":1781874944613,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874944613666758475300001","text":"","type":"stdout","serial":"1781874944613666758475300001","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874944613,"date":1781874944613,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874944613666758475300000","text":"Tip: Interested in query caching in just a few lines of code? Try Accelerate today! https://pris.ly/tip-3-accelerate","type":"stdout","serial":"1781874944613666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874944612,"date":1781874944612,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874944612666758475300004","text":"","type":"stdout","serial":"1781874944612666758475300004","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874944612,"date":1781874944612,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874944612666758475300003","text":"Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)","type":"stdout","serial":"1781874944612666758475300003","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874944612,"date":1781874944612,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874944612666758475300002","text":"","type":"stdout","serial":"1781874944612666758475300002","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874944612,"date":1781874944612,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874944612666758475300001","text":"✔ Generated Prisma Client (v6.19.3) to ./node_modules/.pnpm/@prisma+client@6.19.3_prisma@6.19.3_typescript@5.9.3__typescript@5.9.3/node_modules/@prisma/client in 125ms","type":"stdout","serial":"1781874944612666758475300001","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874944612,"date":1781874944612,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874944612666758475300000","text":"","type":"stdout","serial":"1781874944612666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874944611,"date":1781874944611,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874944611666758475300005","text":"└─────────────────────────────────────────────────────────┘","type":"stderr","serial":"1781874944611666758475300005","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874944611,"date":1781874944611,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874944611666758475300004","text":"│    npm i @prisma/client@latest                          │","type":"stderr","serial":"1781874944611666758475300004","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874944611,"date":1781874944611,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874944611666758475300003","text":"│    npm i --save-dev prisma@latest                       │","type":"stderr","serial":"1781874944611666758475300003","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874944611,"date":1781874944611,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874944611666758475300002","text":"│  Run the following to update                            │","type":"stderr","serial":"1781874944611666758475300002","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874944611,"date":1781874944611,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874944611666758475300001","text":"│                                                         │","type":"stderr","serial":"1781874944611666758475300001","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874944611,"date":1781874944611,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874944611666758475300000","text":"│  https://pris.ly/d/major-version-upgrade                │","type":"stderr","serial":"1781874944611666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874944610,"date":1781874944610,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874944610666758475300002","text":"│  This is a major update - please follow the guide at    │","type":"stderr","serial":"1781874944610666758475300002","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874944610,"date":1781874944610,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874944610666758475300001","text":"│                                                         │","type":"stderr","serial":"1781874944610666758475300001","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874944610,"date":1781874944610,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874944610666758475300000","text":"│  Update available 6.19.3 -> 7.8.0                       │","type":"stderr","serial":"1781874944610666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874944609,"date":1781874944609,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874944609666758475300000","text":"┌─────────────────────────────────────────────────────────┐","type":"stderr","serial":"1781874944609666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874944336,"date":1781874944336,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874944336666758475300000","text":"Prisma schema loaded from prisma/schema.prisma","type":"stdout","serial":"1781874944336666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874944287,"date":1781874944287,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874944287666758475300001","text":"","type":"stderr","serial":"1781874944287666758475300001","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874944287,"date":1781874944287,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874944287666758475300000","text":"For more information, see: https://pris.ly/prisma-config","type":"stderr","serial":"1781874944287666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874944286,"date":1781874944286,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874944286666758475300000","text":"warn The configuration property `package.json#prisma` is deprecated and will be removed in Prisma 7. Please migrate to a Prisma config file (e.g., `prisma.config.ts`).","type":"stderr","serial":"1781874944286666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."},"level":"warning"}
+,
+{"created":1781874943560,"date":1781874943560,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874943560666758475300002","text":"","type":"stdout","serial":"1781874943560666758475300002","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874943560,"date":1781874943560,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874943560666758475300001","text":"> prisma generate && next build","type":"stdout","serial":"1781874943560666758475300001","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874943560,"date":1781874943560,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874943560666758475300000","text":"> cariri-chuteiras@0.1.0 build /vercel/path0","type":"stdout","serial":"1781874943560666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874943559,"date":1781874943559,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874943559666758475300000","text":"","type":"stdout","serial":"1781874943559666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874943261,"date":1781874943261,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874943261666758475300000","text":"Running \"pnpm run build\"","type":"stdout","serial":"1781874943261666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874943240,"date":1781874943240,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874943240666758475300000","text":"Detected Next.js version: 16.2.7","type":"stdout","serial":"1781874943240666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874943223,"date":1781874943223,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874943223666758475300000","text":"Done in 3.3s using pnpm v10.28.0","type":"stdout","serial":"1781874943223666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874943216,"date":1781874943216,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874943216666758475300000","text":". postinstall: Done","type":"stdout","serial":"1781874943216666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874943200,"date":1781874943200,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874943200666758475300000","text":". postinstall: Tip: Need your database queries to be 1000x faster? Accelerate offers you that and more: https://pris.ly/tip-2-accelerate","type":"stdout","serial":"1781874943200666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874943199,"date":1781874943199,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874943199666758475300000","text":". postinstall: Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)","type":"stdout","serial":"1781874943199666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874943198,"date":1781874943198,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874943198666758475300000","text":". postinstall: ✔ Generated Prisma Client (v6.19.3) to ./node_modules/.pnpm/@prisma+client@6.19.3_prisma@6.19.3_typescript@5.9.3__typescript@5.9.3/node_modules/@prisma/client in 182ms","type":"stdout","serial":"1781874943198666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874942916,"date":1781874942916,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874942916666758475300000","text":". postinstall: Prisma schema loaded from prisma/schema.prisma","type":"stdout","serial":"1781874942916666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874942709,"date":1781874942709,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874942709666758475300001","text":". postinstall: For more information, see: https://pris.ly/prisma-config","type":"stdout","serial":"1781874942709666758475300001","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874942709,"date":1781874942709,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874942709666758475300000","text":". postinstall: warn The configuration property `package.json#prisma` is deprecated and will be removed in Prisma 7. Please migrate to a Prisma config file (e.g., `prisma.config.ts`).","type":"stdout","serial":"1781874942709666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."},"level":"warning"}
+,
+{"created":1781874941799,"date":1781874941799,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874941799666758475300000","text":". postinstall$ prisma generate","type":"stdout","serial":"1781874941799666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874941769,"date":1781874941769,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874941769666758475300000","text":"","type":"stdout","serial":"1781874941769666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874940917,"date":1781874940917,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874940917666758475300000","text":"Already up to date","type":"stdout","serial":"1781874940917666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874940722,"date":1781874940722,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874940722666758475300000","text":"Lockfile is up to date, resolution step is skipped","type":"stdout","serial":"1781874940722666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874939840,"date":1781874939840,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874939840666758475300000","text":"Installing dependencies...","type":"stdout","serial":"1781874939840666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874939799,"date":1781874939799,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874939799666758475300000","text":"To use pnpm@9.x, manually opt in using corepack (https://vercel.com/docs/deployments/configure-a-build#corepack)","type":"stdout","serial":"1781874939799666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874939798,"date":1781874939798,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874939798666758475300000","text":"Using pnpm@10.x based on project creation date","type":"stdout","serial":"1781874939798666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874939797,"date":1781874939797,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874939797666758475300000","text":"Detected `pnpm-lock.yaml` 9 which may be generated by pnpm@9.x or pnpm@10.x","type":"stdout","serial":"1781874939797666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874939205,"date":1781874939205,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874939205666758475300000","text":"Vercel CLI 54.14.0","type":"stderr","serial":"1781874939205666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874939171,"date":1781874939171,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874939171666758475300000","text":"Running \"vercel build\"","type":"stdout","serial":"1781874939171666758475300000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874938743,"date":1781874938743,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874938743629263757600000","text":"Restored build cache from previous deployment (E5FEptfGkNhFQn3kKJ4LgRf79jyb)","type":"stdout","serial":"1781874938743629263757600000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874937628,"date":1781874937628,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874937628629263757600000","text":"Cloning completed: 1.288s","type":"stdout","serial":"1781874937628629263757600000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874936338,"date":1781874936338,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874936338629263757600000","text":"Cloning github.com/emmanuelluc4s/caririchuteiras (Branch: main, Commit: 9bd58f6)","type":"stdout","serial":"1781874936338629263757600000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874936122,"date":1781874936122,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874936122629263757600000","text":"Build machine configuration: 2 cores, 8 GB","type":"stdout","serial":"1781874936122629263757600000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+,
+{"created":1781874936119,"date":1781874936119,"deploymentId":"dpl_94j35B5SJ2sWwWpjmhGs68aV5q6W","id":"1781874936119629263757600000","text":"Running build in Washington, D.C., USA (East) – iad1","type":"stdout","serial":"1781874936119629263757600000","info":{"type":"build","name":"bld_8jswpms5k","entrypoint":"."}}
+]

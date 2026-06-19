@@ -13,8 +13,8 @@ import { TestimonialsCarousel } from '@/components/public/home/testimonials-caro
 import { WhatsappCtaBlock } from '@/components/public/home/whatsapp-cta-block'
 import { getFeaturedReviews } from '@/lib/queries/reviews'
 
-// Não pré-renderizar no build (depende do DB) — re-render a cada 1h em prod
-export const dynamic = 'force-dynamic'
+// ISR — gera no primeiro hit, fica cacheado 1h. Resolve lentidão de
+// navegação (sem isso, cada hit = 9 queries no Supabase).
 export const revalidate = 3600
 
 export const metadata: Metadata = {

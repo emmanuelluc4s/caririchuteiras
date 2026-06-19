@@ -1,0 +1,201 @@
+[
+{"created":1781873970223,"date":1781873970223,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873970223841691521700000","text":"Build cache uploaded: 5.160s","type":"stdout","serial":"1781873970223841691521700000","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873965063,"date":1781873965063,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873965063841691521700002","text":"Uploading build cache [222.14 MB]","type":"stdout","serial":"1781873965063841691521700002","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873965063,"date":1781873965063,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873965063841691521700001","text":"Created build cache: 26s","type":"stdout","serial":"1781873965063841691521700001","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873939538,"date":1781873939538,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873939538841691521700000","text":"Creating build cache...","type":"stdout","serial":"1781873939538841691521700000","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873939417,"date":1781873939417,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873939417841691521700000","text":"Deployment completed","type":"stdout","serial":"1781873939417841691521700000","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873924214,"date":1781873924214,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873924214841691521700000","text":"Deploying outputs...","type":"stdout","serial":"1781873924214841691521700000","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923538,"date":1781873923538,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923538841691521700000","text":"Build Completed in /vercel/output [1m]","type":"stderr","serial":"1781873923538841691521700000","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923179,"date":1781873923179,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923179841691521700004","text":"","type":"stdout","serial":"1781873923179841691521700004","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923179,"date":1781873923179,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923179841691521700003","text":"ƒ  (Dynamic)  server-rendered on demand","type":"stdout","serial":"1781873923179841691521700003","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923179,"date":1781873923179,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923179841691521700002","text":"●  (SSG)      prerendered as static HTML (uses generateStaticParams)","type":"stdout","serial":"1781873923179841691521700002","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923179,"date":1781873923179,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923179841691521700001","text":"○  (Static)   prerendered as static content","type":"stdout","serial":"1781873923179841691521700001","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923179,"date":1781873923179,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923179841691521700000","text":"","type":"stdout","serial":"1781873923179841691521700000","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923178,"date":1781873923178,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923178841691521700007","text":"ƒ Proxy (Middleware)","type":"stdout","serial":"1781873923178841691521700007","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923178,"date":1781873923178,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923178841691521700006","text":"","type":"stdout","serial":"1781873923178841691521700006","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923178,"date":1781873923178,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923178841691521700005","text":"","type":"stdout","serial":"1781873923178841691521700005","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923178,"date":1781873923178,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923178841691521700004","text":"└ ○ /termos                                         1d      1y","type":"stdout","serial":"1781873923178841691521700004","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923178,"date":1781873923178,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923178841691521700003","text":"├ ○ /sitemap.xml                                    1h      1y","type":"stdout","serial":"1781873923178841691521700003","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923178,"date":1781873923178,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923178841691521700002","text":"├ ○ /robots.txt","type":"stdout","serial":"1781873923178841691521700002","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923178,"date":1781873923178,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923178841691521700001","text":"├ ƒ /quem-somos","type":"stdout","serial":"1781873923178841691521700001","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923178,"date":1781873923178,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923178841691521700000","text":"├ ƒ /promocoes","type":"stdout","serial":"1781873923178841691521700000","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923177,"date":1781873923177,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923177841691521700008","text":"├ ƒ /produto/[slug]/opengraph-image-18ii2o","type":"stdout","serial":"1781873923177841691521700008","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923177,"date":1781873923177,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923177841691521700007","text":"├ ● /produto/[slug]","type":"stdout","serial":"1781873923177841691521700007","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923177,"date":1781873923177,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923177841691521700006","text":"├ ○ /privacidade                                    1d      1y","type":"stdout","serial":"1781873923177841691521700006","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923177,"date":1781873923177,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923177841691521700005","text":"├ ƒ /novidades","type":"stdout","serial":"1781873923177841691521700005","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923177,"date":1781873923177,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923177841691521700004","text":"├ ƒ /manutencao","type":"stdout","serial":"1781873923177841691521700004","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923177,"date":1781873923177,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923177841691521700003","text":"├ ○ /manifest.webmanifest","type":"stdout","serial":"1781873923177841691521700003","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923177,"date":1781873923177,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923177841691521700002","text":"├ ƒ /contato","type":"stdout","serial":"1781873923177841691521700002","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923177,"date":1781873923177,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923177841691521700001","text":"├ ƒ /comparar","type":"stdout","serial":"1781873923177841691521700001","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923177,"date":1781873923177,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923177841691521700000","text":"├ ● /categoria/[slug]","type":"stdout","serial":"1781873923177841691521700000","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923176,"date":1781873923176,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923176841691521700005","text":"├ ƒ /busca","type":"stdout","serial":"1781873923176841691521700005","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923176,"date":1781873923176,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923176841691521700004","text":"├ ƒ /avaliacoes","type":"stdout","serial":"1781873923176841691521700004","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923176,"date":1781873923176,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923176841691521700003","text":"├ ƒ /api/track","type":"stdout","serial":"1781873923176841691521700003","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923176,"date":1781873923176,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923176841691521700002","text":"├ ƒ /api/search/suggestions","type":"stdout","serial":"1781873923176841691521700002","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923176,"date":1781873923176,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923176841691521700001","text":"├ ƒ /api/reviews","type":"stdout","serial":"1781873923176841691521700001","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923176,"date":1781873923176,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923176841691521700000","text":"├ ƒ /api/quick-view/[slug]","type":"stdout","serial":"1781873923176841691521700000","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923175,"date":1781873923175,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923175841691521700006","text":"├ ƒ /api/compare/thumbnails","type":"stdout","serial":"1781873923175841691521700006","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923175,"date":1781873923175,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923175841691521700005","text":"├ ƒ /admin/usuarios","type":"stdout","serial":"1781873923175841691521700005","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923175,"date":1781873923175,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923175841691521700004","text":"├ ƒ /admin/unauthorized","type":"stdout","serial":"1781873923175841691521700004","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923175,"date":1781873923175,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923175841691521700003","text":"├ ƒ /admin/relatorios","type":"stdout","serial":"1781873923175841691521700003","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923175,"date":1781873923175,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923175841691521700002","text":"├ ƒ /admin/produtos/novo","type":"stdout","serial":"1781873923175841691521700002","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923175,"date":1781873923175,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923175841691521700001","text":"├ ƒ /admin/produtos/[id]/editar","type":"stdout","serial":"1781873923175841691521700001","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923175,"date":1781873923175,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923175841691521700000","text":"├ ƒ /admin/produtos","type":"stdout","serial":"1781873923175841691521700000","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923174,"date":1781873923174,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923174841691521700006","text":"├ ƒ /admin/perfil","type":"stdout","serial":"1781873923174841691521700006","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923174,"date":1781873923174,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923174841691521700005","text":"├ ƒ /admin/login","type":"stdout","serial":"1781873923174841691521700005","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923174,"date":1781873923174,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923174841691521700004","text":"├ ƒ /admin/dashboard","type":"stdout","serial":"1781873923174841691521700004","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923174,"date":1781873923174,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923174841691521700003","text":"├ ƒ /admin/cupons/novo","type":"stdout","serial":"1781873923174841691521700003","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923174,"date":1781873923174,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923174841691521700002","text":"├ ƒ /admin/cupons/[id]/editar","type":"stdout","serial":"1781873923174841691521700002","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923174,"date":1781873923174,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923174841691521700001","text":"├ ƒ /admin/cupons","type":"stdout","serial":"1781873923174841691521700001","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923174,"date":1781873923174,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923174841691521700000","text":"├ ƒ /admin/configuracoes","type":"stdout","serial":"1781873923174841691521700000","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923173,"date":1781873923173,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923173841691521700007","text":"├ ƒ /admin/categorias/nova","type":"stdout","serial":"1781873923173841691521700007","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923173,"date":1781873923173,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923173841691521700006","text":"├ ƒ /admin/categorias/[id]/editar","type":"stdout","serial":"1781873923173841691521700006","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923173,"date":1781873923173,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923173841691521700005","text":"├ ƒ /admin/categorias","type":"stdout","serial":"1781873923173841691521700005","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923173,"date":1781873923173,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923173841691521700004","text":"├ ƒ /admin/avaliacoes","type":"stdout","serial":"1781873923173841691521700004","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923173,"date":1781873923173,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923173841691521700003","text":"├ ƒ /admin/auditoria","type":"stdout","serial":"1781873923173841691521700003","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923173,"date":1781873923173,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923173841691521700002","text":"├ ƒ /admin","type":"stdout","serial":"1781873923173841691521700002","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923173,"date":1781873923173,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923173841691521700001","text":"├ ○ /_not-found","type":"stdout","serial":"1781873923173841691521700001","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923173,"date":1781873923173,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923173841691521700000","text":"┌ ƒ /","type":"stdout","serial":"1781873923173841691521700000","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923172,"date":1781873923172,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923172841691521700000","text":"Route (app)                                 Revalidate  Expire","type":"stdout","serial":"1781873923172841691521700000","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873923169,"date":1781873923169,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873923169841691521700000","text":"","type":"stdout","serial":"1781873923169841691521700000","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873922906,"date":1781873922906,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873922906841691521700000","text":"  Running onBuildComplete from Vercel","type":"stdout","serial":"1781873922906841691521700000","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873922723,"date":1781873922723,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873922723841691521700000","text":"  Finalizing page optimization ...","type":"stdout","serial":"1781873922723841691521700000","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873922716,"date":1781873922716,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873922716841691521700000","text":"✓ Generating static pages using 1 worker (15/15) in 6.5s","type":"stdout","serial":"1781873922716841691521700000","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873922715,"date":1781873922715,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873922715841691521700001","text":"Error querying the database: FATAL: (ENOTFOUND) tenant/user postgres.hyukzyqgoqqymnmtoicg not found","type":"stdout","serial":"1781873922715841691521700001","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."},"level":"error"}
+,
+{"created":1781873922715,"date":1781873922715,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873922715841691521700000","text":"","type":"stdout","serial":"1781873922715841691521700000","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873922714,"date":1781873922714,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873922714841691521700000","text":"","type":"stdout","serial":"1781873922714841691521700000","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873922713,"date":1781873922713,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873922713841691521700005","text":"Invalid `prisma.product.findMany()` invocation:","type":"stdout","serial":"1781873922713841691521700005","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873922713,"date":1781873922713,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873922713841691521700004","text":"prisma:error ","type":"stdout","serial":"1781873922713841691521700004","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873922713,"date":1781873922713,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873922713841691521700003","text":"Error querying the database: FATAL: (ENOTFOUND) tenant/user postgres.hyukzyqgoqqymnmtoicg not found","type":"stdout","serial":"1781873922713841691521700003","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."},"level":"error"}
+,
+{"created":1781873922713,"date":1781873922713,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873922713841691521700002","text":"","type":"stdout","serial":"1781873922713841691521700002","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873922713,"date":1781873922713,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873922713841691521700001","text":"","type":"stdout","serial":"1781873922713841691521700001","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873922713,"date":1781873922713,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873922713841691521700000","text":"Invalid `prisma.category.findMany()` invocation:","type":"stdout","serial":"1781873922713841691521700000","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873922712,"date":1781873922712,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873922712841691521700000","text":"prisma:error ","type":"stdout","serial":"1781873922712841691521700000","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873921161,"date":1781873921161,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873921161841691521700004","text":"Error querying the database: FATAL: (ENOTFOUND) tenant/user postgres.hyukzyqgoqqymnmtoicg not found","type":"stdout","serial":"1781873921161841691521700004","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."},"level":"error"}
+,
+{"created":1781873921161,"date":1781873921161,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873921161841691521700003","text":"","type":"stdout","serial":"1781873921161841691521700003","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873921161,"date":1781873921161,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873921161841691521700002","text":"","type":"stdout","serial":"1781873921161841691521700002","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873921161,"date":1781873921161,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873921161841691521700001","text":"Invalid `prisma.siteConfig.findUnique()` invocation:","type":"stdout","serial":"1781873921161841691521700001","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873921161,"date":1781873921161,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873921161841691521700000","text":"prisma:error ","type":"stdout","serial":"1781873921161841691521700000","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873921154,"date":1781873921154,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873921154841691521700002","text":"Error querying the database: FATAL: (ENOTFOUND) tenant/user postgres.hyukzyqgoqqymnmtoicg not found","type":"stdout","serial":"1781873921154841691521700002","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."},"level":"error"}
+,
+{"created":1781873921154,"date":1781873921154,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873921154841691521700001","text":"","type":"stdout","serial":"1781873921154841691521700001","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873921154,"date":1781873921154,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873921154841691521700000","text":"","type":"stdout","serial":"1781873921154841691521700000","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873921153,"date":1781873921153,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873921153841691521700003","text":"Invalid `prisma.product.findMany()` invocation:","type":"stdout","serial":"1781873921153841691521700003","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873921153,"date":1781873921153,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873921153841691521700002","text":"prisma:error ","type":"stdout","serial":"1781873921153841691521700002","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873921153,"date":1781873921153,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873921153841691521700001","text":"Error querying the database: FATAL: (ENOTFOUND) tenant/user postgres.hyukzyqgoqqymnmtoicg not found","type":"stdout","serial":"1781873921153841691521700001","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."},"level":"error"}
+,
+{"created":1781873921153,"date":1781873921153,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873921153841691521700000","text":"","type":"stdout","serial":"1781873921153841691521700000","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873921152,"date":1781873921152,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873921152841691521700001","text":"","type":"stdout","serial":"1781873921152841691521700001","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873921152,"date":1781873921152,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873921152841691521700000","text":"Invalid `prisma.product.findMany()` invocation:","type":"stdout","serial":"1781873921152841691521700000","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873921149,"date":1781873921149,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873921149841691521700000","text":"prisma:error ","type":"stdout","serial":"1781873921149841691521700000","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873919605,"date":1781873919605,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873919605841691521700000","text":"  Generating static pages using 1 worker (11/15) \r","type":"stdout","serial":"1781873919605841691521700000","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873919602,"date":1781873919602,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873919602841691521700000","text":"}","type":"stderr","serial":"1781873919602841691521700000","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873919601,"date":1781873919601,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873919601841691521700000","text":"  digest: 'DYNAMIC_SERVER_USAGE'","type":"stderr","serial":"1781873919601841691521700000","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873919600,"date":1781873919600,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873919600841691521700003","text":"  description: \"Route /admin/unauthorized couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error\",","type":"stderr","serial":"1781873919600841691521700003","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873919600,"date":1781873919600,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873919600841691521700002","text":"    at j (.next/server/chunks/ssr/[root-of-the-server]__1ouzh6h._.js:1:12808) {","type":"stderr","serial":"1781873919600841691521700002","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873919600,"date":1781873919600,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873919600841691521700001","text":"    at <unknown> (.next/server/chunks/ssr/_1quw5w2._.js:1:10074)","type":"stderr","serial":"1781873919600841691521700001","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873919600,"date":1781873919600,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873919600841691521700000","text":"    at s (.next/server/chunks/ssr/_1pky0o-._.js:1:7762)","type":"stderr","serial":"1781873919600841691521700000","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873919599,"date":1781873919599,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873919599841691521700001","text":"    at n (.next/server/chunks/ssr/0ph__next_1k8ug6-._.js:1:9291)","type":"stderr","serial":"1781873919599841691521700001","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873919599,"date":1781873919599,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873919599841691521700000","text":"    at y (.next/server/chunks/ssr/0ph__next_dist_0_hnvfg._.js:1:12451)","type":"stderr","serial":"1781873919599841691521700000","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873919598,"date":1781873919598,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873919598841691521700000","text":"[getCurrentAdmin] error: Error: Dynamic server usage: Route /admin/unauthorized couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error","type":"stderr","serial":"1781873919598841691521700000","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."},"level":"error"}
+,
+{"created":1781873919573,"date":1781873919573,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873919573841691521700000","text":"  Generating static pages using 1 worker (7/15) \r","type":"stdout","serial":"1781873919573841691521700000","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+,
+{"created":1781873919465,"date":1781873919465,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873919465841691521700008","text":"Error querying the database: FATAL: (ENOTFOUND) tenant/user postgres.hyukzyqgoqqymnmtoicg not found","type":"stdout","serial":"1781873919465841691521700008","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."},"level":"error"}
+,
+{"created":1781873919465,"date":1781873919465,"deploymentId":"dpl_3heB2SuzVgxKXea7aRu73pCWR9Hd","id":"1781873919465841691521700007","text":"","type":"stdout","serial":"1781873919465841691521700007","info":{"type":"build","name":"bld_ltrntee42","entrypoint":"."}}
+]

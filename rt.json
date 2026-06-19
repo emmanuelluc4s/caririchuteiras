@@ -1,0 +1,161 @@
+[
+{"created":1781874650782,"date":1781874650782,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874650782043540182300000","text":"Build cache uploaded: 5.955s","type":"stdout","serial":"1781874650782043540182300000","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874644831,"date":1781874644831,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874644831043540182300003","text":"Uploading build cache [222.14 MB]","type":"stdout","serial":"1781874644831043540182300003","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874644831,"date":1781874644831,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874644831043540182300002","text":"Created build cache: 25s","type":"stdout","serial":"1781874644831043540182300002","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874619674,"date":1781874619674,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874619674043540182300000","text":"Creating build cache...","type":"stdout","serial":"1781874619674043540182300000","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874619551,"date":1781874619551,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874619551043540182300000","text":"Deployment completed","type":"stdout","serial":"1781874619551043540182300000","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874602801,"date":1781874602801,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874602801043540182300000","text":"Deploying outputs...","type":"stdout","serial":"1781874602801043540182300000","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874602089,"date":1781874602089,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874602089043540182300000","text":"Build Completed in /vercel/output [1m]","type":"stderr","serial":"1781874602089043540182300000","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601723,"date":1781874601723,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601723043540182300004","text":"","type":"stdout","serial":"1781874601723043540182300004","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601723,"date":1781874601723,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601723043540182300003","text":"ƒ  (Dynamic)  server-rendered on demand","type":"stdout","serial":"1781874601723043540182300003","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601723,"date":1781874601723,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601723043540182300002","text":"●  (SSG)      prerendered as static HTML (uses generateStaticParams)","type":"stdout","serial":"1781874601723043540182300002","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601723,"date":1781874601723,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601723043540182300001","text":"○  (Static)   prerendered as static content","type":"stdout","serial":"1781874601723043540182300001","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601723,"date":1781874601723,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601723043540182300000","text":"","type":"stdout","serial":"1781874601723043540182300000","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601722,"date":1781874601722,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601722043540182300007","text":"ƒ Proxy (Middleware)","type":"stdout","serial":"1781874601722043540182300007","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601722,"date":1781874601722,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601722043540182300006","text":"","type":"stdout","serial":"1781874601722043540182300006","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601722,"date":1781874601722,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601722043540182300005","text":"","type":"stdout","serial":"1781874601722043540182300005","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601722,"date":1781874601722,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601722043540182300004","text":"└ ○ /termos                                         1d      1y","type":"stdout","serial":"1781874601722043540182300004","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601722,"date":1781874601722,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601722043540182300003","text":"├ ○ /sitemap.xml                                    1h      1y","type":"stdout","serial":"1781874601722043540182300003","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601722,"date":1781874601722,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601722043540182300002","text":"├ ○ /robots.txt","type":"stdout","serial":"1781874601722043540182300002","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601722,"date":1781874601722,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601722043540182300001","text":"├ ƒ /quem-somos","type":"stdout","serial":"1781874601722043540182300001","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601722,"date":1781874601722,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601722043540182300000","text":"├ ƒ /promocoes","type":"stdout","serial":"1781874601722043540182300000","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601721,"date":1781874601721,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601721043540182300005","text":"├ ƒ /produto/[slug]/opengraph-image-18ii2o","type":"stdout","serial":"1781874601721043540182300005","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601721,"date":1781874601721,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601721043540182300004","text":"├ ● /produto/[slug]","type":"stdout","serial":"1781874601721043540182300004","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601721,"date":1781874601721,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601721043540182300003","text":"├ ○ /privacidade                                    1d      1y","type":"stdout","serial":"1781874601721043540182300003","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601721,"date":1781874601721,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601721043540182300002","text":"├ ƒ /novidades","type":"stdout","serial":"1781874601721043540182300002","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601721,"date":1781874601721,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601721043540182300001","text":"├ ƒ /manutencao","type":"stdout","serial":"1781874601721043540182300001","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601721,"date":1781874601721,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601721043540182300000","text":"├ ○ /manifest.webmanifest","type":"stdout","serial":"1781874601721043540182300000","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601720,"date":1781874601720,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601720043540182300005","text":"├ ƒ /contato","type":"stdout","serial":"1781874601720043540182300005","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601720,"date":1781874601720,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601720043540182300004","text":"├ ƒ /comparar","type":"stdout","serial":"1781874601720043540182300004","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601720,"date":1781874601720,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601720043540182300003","text":"├ ● /categoria/[slug]","type":"stdout","serial":"1781874601720043540182300003","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601720,"date":1781874601720,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601720043540182300002","text":"├ ƒ /busca","type":"stdout","serial":"1781874601720043540182300002","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601720,"date":1781874601720,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601720043540182300001","text":"├ ƒ /avaliacoes","type":"stdout","serial":"1781874601720043540182300001","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601720,"date":1781874601720,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601720043540182300000","text":"├ ƒ /api/track","type":"stdout","serial":"1781874601720043540182300000","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601719,"date":1781874601719,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601719043540182300007","text":"├ ƒ /api/search/suggestions","type":"stdout","serial":"1781874601719043540182300007","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601719,"date":1781874601719,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601719043540182300006","text":"├ ƒ /api/reviews","type":"stdout","serial":"1781874601719043540182300006","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601719,"date":1781874601719,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601719043540182300005","text":"├ ƒ /api/quick-view/[slug]","type":"stdout","serial":"1781874601719043540182300005","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601719,"date":1781874601719,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601719043540182300004","text":"├ ƒ /api/compare/thumbnails","type":"stdout","serial":"1781874601719043540182300004","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601719,"date":1781874601719,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601719043540182300003","text":"├ ƒ /admin/usuarios","type":"stdout","serial":"1781874601719043540182300003","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601719,"date":1781874601719,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601719043540182300002","text":"├ ƒ /admin/unauthorized","type":"stdout","serial":"1781874601719043540182300002","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601719,"date":1781874601719,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601719043540182300001","text":"├ ƒ /admin/relatorios","type":"stdout","serial":"1781874601719043540182300001","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601719,"date":1781874601719,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601719043540182300000","text":"├ ƒ /admin/produtos/novo","type":"stdout","serial":"1781874601719043540182300000","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601718,"date":1781874601718,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601718043540182300009","text":"├ ƒ /admin/produtos/[id]/editar","type":"stdout","serial":"1781874601718043540182300009","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601718,"date":1781874601718,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601718043540182300008","text":"├ ƒ /admin/produtos","type":"stdout","serial":"1781874601718043540182300008","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601718,"date":1781874601718,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601718043540182300007","text":"├ ƒ /admin/perfil","type":"stdout","serial":"1781874601718043540182300007","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601718,"date":1781874601718,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601718043540182300006","text":"├ ƒ /admin/login","type":"stdout","serial":"1781874601718043540182300006","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601718,"date":1781874601718,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601718043540182300005","text":"├ ƒ /admin/dashboard","type":"stdout","serial":"1781874601718043540182300005","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601718,"date":1781874601718,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601718043540182300004","text":"├ ƒ /admin/cupons/novo","type":"stdout","serial":"1781874601718043540182300004","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601718,"date":1781874601718,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601718043540182300003","text":"├ ƒ /admin/cupons/[id]/editar","type":"stdout","serial":"1781874601718043540182300003","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601718,"date":1781874601718,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601718043540182300002","text":"├ ƒ /admin/cupons","type":"stdout","serial":"1781874601718043540182300002","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601718,"date":1781874601718,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601718043540182300001","text":"├ ƒ /admin/configuracoes","type":"stdout","serial":"1781874601718043540182300001","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601718,"date":1781874601718,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601718043540182300000","text":"├ ƒ /admin/categorias/nova","type":"stdout","serial":"1781874601718043540182300000","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601717,"date":1781874601717,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601717043540182300006","text":"├ ƒ /admin/categorias/[id]/editar","type":"stdout","serial":"1781874601717043540182300006","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601717,"date":1781874601717,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601717043540182300005","text":"├ ƒ /admin/categorias","type":"stdout","serial":"1781874601717043540182300005","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601717,"date":1781874601717,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601717043540182300004","text":"├ ƒ /admin/avaliacoes","type":"stdout","serial":"1781874601717043540182300004","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601717,"date":1781874601717,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601717043540182300003","text":"├ ƒ /admin/auditoria","type":"stdout","serial":"1781874601717043540182300003","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601717,"date":1781874601717,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601717043540182300002","text":"├ ƒ /admin","type":"stdout","serial":"1781874601717043540182300002","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601717,"date":1781874601717,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601717043540182300001","text":"├ ○ /_not-found","type":"stdout","serial":"1781874601717043540182300001","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601717,"date":1781874601717,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601717043540182300000","text":"┌ ƒ /","type":"stdout","serial":"1781874601717043540182300000","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601716,"date":1781874601716,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601716043540182300000","text":"Route (app)                                 Revalidate  Expire","type":"stdout","serial":"1781874601716043540182300000","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601713,"date":1781874601713,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601713043540182300000","text":"","type":"stdout","serial":"1781874601713043540182300000","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601431,"date":1781874601431,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601431043540182300000","text":"  Running onBuildComplete from Vercel","type":"stdout","serial":"1781874601431043540182300000","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601236,"date":1781874601236,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601236043540182300000","text":"  Finalizing page optimization ...","type":"stdout","serial":"1781874601236043540182300000","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874601228,"date":1781874601228,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874601228043540182300000","text":"✓ Generating static pages using 1 worker (15/15) in 5.5s","type":"stdout","serial":"1781874601228043540182300000","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874599554,"date":1781874599554,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874599554043540182300000","text":"  Generating static pages using 1 worker (11/15) \r","type":"stdout","serial":"1781874599554043540182300000","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874599552,"date":1781874599552,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874599552043540182300002","text":"}","type":"stderr","serial":"1781874599552043540182300002","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874599552,"date":1781874599552,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874599552043540182300001","text":"  digest: 'DYNAMIC_SERVER_USAGE'","type":"stderr","serial":"1781874599552043540182300001","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874599552,"date":1781874599552,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874599552043540182300000","text":"  description: \"Route /admin/unauthorized couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error\",","type":"stderr","serial":"1781874599552043540182300000","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874599551,"date":1781874599551,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874599551043540182300002","text":"    at j (.next/server/chunks/ssr/[root-of-the-server]__1ouzh6h._.js:1:12808) {","type":"stderr","serial":"1781874599551043540182300002","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874599551,"date":1781874599551,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874599551043540182300001","text":"    at <unknown> (.next/server/chunks/ssr/_1quw5w2._.js:1:10074)","type":"stderr","serial":"1781874599551043540182300001","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874599551,"date":1781874599551,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874599551043540182300000","text":"    at s (.next/server/chunks/ssr/_1pky0o-._.js:1:7762)","type":"stderr","serial":"1781874599551043540182300000","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874599549,"date":1781874599549,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874599549043540182300001","text":"    at n (.next/server/chunks/ssr/0ph__next_1k8ug6-._.js:1:9291)","type":"stderr","serial":"1781874599549043540182300001","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874599549,"date":1781874599549,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874599549043540182300000","text":"    at y (.next/server/chunks/ssr/0ph__next_dist_0_hnvfg._.js:1:12451)","type":"stderr","serial":"1781874599549043540182300000","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874599548,"date":1781874599548,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874599548043540182300000","text":"[getCurrentAdmin] error: Error: Dynamic server usage: Route /admin/unauthorized couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error","type":"stderr","serial":"1781874599548043540182300000","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."},"level":"error"}
+,
+{"created":1781874599353,"date":1781874599353,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874599353043540182300000","text":"  Generating static pages using 1 worker (7/15) \r","type":"stdout","serial":"1781874599353043540182300000","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874598226,"date":1781874598226,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874598226043540182300000","text":"  Generating static pages using 1 worker (3/15) \r","type":"stdout","serial":"1781874598226043540182300000","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874595887,"date":1781874595887,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874595887043540182300001","text":"}","type":"stderr","serial":"1781874595887043540182300001","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874595887,"date":1781874595887,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874595887043540182300000","text":"  digest: 'DYNAMIC_SERVER_USAGE'","type":"stderr","serial":"1781874595887043540182300000","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874595886,"date":1781874595886,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874595886043540182300002","text":"  description: \"Route /admin/perfil couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error\",","type":"stderr","serial":"1781874595886043540182300002","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874595886,"date":1781874595886,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874595886043540182300001","text":"    at f (.next/server/chunks/ssr/_1quw5w2._.js:1:11799) {","type":"stderr","serial":"1781874595886043540182300001","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874595886,"date":1781874595886,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874595886043540182300000","text":"    at g (.next/server/chunks/ssr/_1quw5w2._.js:1:10467)","type":"stderr","serial":"1781874595886043540182300000","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+,
+{"created":1781874595885,"date":1781874595885,"deploymentId":"dpl_E5FEptfGkNhFQn3kKJ4LgRf79jyb","id":"1781874595885043540182300002","text":"    at <unknown> (.next/server/chunks/ssr/_1quw5w2._.js:1:10074)","type":"stderr","serial":"1781874595885043540182300002","info":{"type":"build","name":"bld_ab17683lh","entrypoint":"."}}
+]

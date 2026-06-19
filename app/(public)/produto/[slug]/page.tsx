@@ -29,8 +29,9 @@ import { ProductViewTracker } from '@/components/public/product/product-view-tra
 import { RecentlyViewedTracker } from '@/components/public/recently-viewed/recently-viewed-tracker'
 import { Badge } from '@/components/ui/badge'
 
-export const dynamic = 'force-dynamic'
+// ISR lazy — gera no primeiro hit por slug, cache de 1h
 export const revalidate = 3600
+export const dynamicParams = true
 
 type Params = { slug: string }
 

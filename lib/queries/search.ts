@@ -1,4 +1,4 @@
-import { cache } from 'react'
+import { unstable_cache } from 'next/cache'
 import { prisma } from '@/lib/prisma'
 
 const FALLBACK_SEARCHES = [
@@ -17,7 +17,7 @@ const FALLBACK_SEARCHES = [
  * Vem da tabela SiteEvent (type='search', metadata.query).
  * Fallback hardcoded se não houver dados ainda.
  */
-export const getPopularSearches = cache(
+export const getPopularSearches = unstable_cache(
   async (limit = 8): Promise<string[]> => {
     const cutoff = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000)
 
@@ -58,12 +58,14 @@ export const getPopularSearches = cache(
       return FALLBACK_SEARCHES.slice(0, limit)
     }
   },
+  ['popular-searches'],
+  { revalidate: 600, tags: ['popular-searches'] },
 )
 
 /**
  * Produtos populares para mostrar no modal de busca vazio.
  */
-export const getPopularProductsForSearch = cache(async (limit = 6) => {
+export const getPopularProductsForSearch = unstable_cache(async (limit = 6) => {
   try {
     return await prisma.product.findMany({
       where: { isActive: true },
@@ -77,4 +79,4 @@ export const getPopularProductsForSearch = cache(async (limit = 6) => {
   } catch {
     return []
   }
-})
+}, ['popular-products-search'], { revalidate: 600, tags: ['popular-products'] })

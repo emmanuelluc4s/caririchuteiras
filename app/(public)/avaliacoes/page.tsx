@@ -10,7 +10,6 @@ import { PageHero } from '@/components/public/static/page-hero'
 import { RatingDistribution } from '@/components/public/reviews/rating-distribution'
 import { GlobalReviewsList } from '@/components/public/reviews/global-reviews-list'
 
-export const dynamic = 'force-dynamic'
 export const revalidate = 600
 
 export const metadata: Metadata = {

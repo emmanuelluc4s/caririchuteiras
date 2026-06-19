@@ -19,8 +19,10 @@ import { getBreadcrumbSchema } from '@/lib/seo/structured-data'
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? 'https://cariri-chuteiras.vercel.app'
 
-export const dynamic = 'force-dynamic'
+// Categoria é naturalmente dynamic por causa de searchParams (filtros),
+// mas revalidate aproveita o cache quando não tem filtros aplicados.
 export const revalidate = 3600
+export const dynamicParams = true
 
 type Params = { slug: string }
 type SearchParams = Record<string, string | string[] | undefined>

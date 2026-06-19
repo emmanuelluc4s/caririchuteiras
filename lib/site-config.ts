@@ -1,20 +1,32 @@
 import { cache } from 'react'
+import { unstable_cache } from 'next/cache'
 import { prisma } from '@/lib/prisma'
 
 /**
- * Busca a configuração singleton do site (cached por request).
- * Inclui fallback robusto para o caso de:
- *   - banco ainda não configurado (Supabase sem credenciais)
- *   - seed ainda não rodado
- *   - erro de conexão pontual
+ * Busca a configuração singleton do site.
+ * - `cache(react)` deduplica chamadas no mesmo request.
+ * - `unstable_cache` compartilha entre requests por 5min — sem isso,
+ *   cada navegação refetch a config no banco e a navegação fica lenta.
  */
+const _getSiteConfigCached = unstable_cache(
+  async () => {
+    try {
+      const config = await prisma.siteConfig.findUnique({
+        where: { id: 'singleton' },
+      })
+      if (config) return config
+    } catch {
+      // Cai no fallback abaixo
+    }
+    return null
+  },
+  ['site-config-singleton'],
+  { revalidate: 300, tags: ['site-config'] },
+)
+
 export const getSiteConfig = cache(async () => {
-  try {
-    const config = await prisma.siteConfig.findUnique({ where: { id: 'singleton' } })
-    if (config) return config
-  } catch {
-    // Cai no fallback abaixo
-  }
+  const config = await _getSiteConfigCached()
+  if (config) return config
 
   return {
     id: 'singleton',
