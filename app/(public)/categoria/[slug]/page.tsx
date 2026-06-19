@@ -20,6 +20,7 @@ import { getBreadcrumbSchema } from '@/lib/seo/structured-data'
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? 'https://cariri-chuteiras.vercel.app'
 
+export const dynamic = 'force-dynamic'
 export const revalidate = 3600
 
 export async function generateStaticParams() {

@@ -31,6 +31,7 @@ import { ProductViewTracker } from '@/components/public/product/product-view-tra
 import { RecentlyViewedTracker } from '@/components/public/recently-viewed/recently-viewed-tracker'
 import { Badge } from '@/components/ui/badge'
 
+export const dynamic = 'force-dynamic'
 export const revalidate = 3600
 
 export async function generateStaticParams() {
