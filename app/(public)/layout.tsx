@@ -1,3 +1,4 @@
+import { redirect } from 'next/navigation'
 import { PromoBar } from '@/components/public/layout/promo-bar'
 import { Header } from '@/components/public/layout/header'
 import { Footer } from '@/components/public/layout/footer'
@@ -32,6 +33,11 @@ export default async function PublicLayout({
       getOrganizationSchema(),
     ])
   const websiteSchema = getWebSiteSchema()
+
+  // Modo manutenção (movido do middleware — Prisma não cabe no edge runtime)
+  if (config.isMaintenanceMode) {
+    redirect('/manutencao')
+  }
 
   const promoMessages = Array.isArray(config.promoBarMessages)
     ? (config.promoBarMessages as string[])
