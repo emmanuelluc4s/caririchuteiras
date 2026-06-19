@@ -19,7 +19,7 @@ import { ProductGallery } from '@/components/public/product/product-gallery'
 import { UrgencyBanner } from '@/components/public/product/urgency-banner'
 import { ProductPriceBlock } from '@/components/public/product/product-price-block'
 import { ProductCouponHighlight } from '@/components/public/product/product-coupon-highlight'
-// import { ProductDescription } from '@/components/public/product/product-description'
+import { ProductDescription } from '@/components/public/product/product-description'
 import { ShareButtons } from '@/components/public/product/share-buttons'
 import { CompareButton } from '@/components/public/compare/compare-button'
 // import { ProductReviews } from '@/components/public/product/product-reviews'
@@ -249,7 +249,18 @@ export default async function ProductPage({
           </div>
         </div>
 
-        {/* ProductDescription e ProductReviews removidos p/ debug */}
+        <ProductDescription
+          description={product.description}
+          attributes={{
+            material: product.material,
+            weight: product.weight,
+            collar: product.collar,
+            technology: product.technology,
+            useIndication: product.useIndication,
+            warranty: product.warranty,
+            origin: product.origin,
+          }}
+        />
         <p>Reviews count: {reviewsDistribution.total} | {reviewsList.items.length}</p>
 
         {/* <RelatedProducts products={related.map(toProductCardData)} /> */}
