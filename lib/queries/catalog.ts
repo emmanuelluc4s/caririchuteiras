@@ -223,7 +223,7 @@ export const getActiveCategories = cache(async () => {
 
 export async function getCategoryBySlug(slug: string) {
   try {
-    return await prisma.category.findUnique({
+    return await prisma.category.findFirst({
       where: { slug, isActive: true },
     })
   } catch {

@@ -45,7 +45,7 @@ export async function submitReviewAction(
       return { ok: true, message: 'Avaliação enviada para moderação.' }
     }
 
-    const product = await prisma.product.findUnique({
+    const product = await prisma.product.findFirst({
       where: { id: productId, isActive: true },
     })
     if (!product) {

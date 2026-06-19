@@ -6,7 +6,7 @@ import { prisma } from '@/lib/prisma'
  * Retorna null se não encontrado ou inativo.
  */
 export const getProductBySlug = cache(async (slug: string) => {
-  const product = await prisma.product.findUnique({
+  const product = await prisma.product.findFirst({
     where: { slug, isActive: true },
     include: {
       images: { orderBy: { order: 'asc' } },
