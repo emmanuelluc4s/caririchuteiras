@@ -4,7 +4,6 @@ import {
   queryCatalog,
   getCategoryFacets,
   getCategoryBySlug,
-  getCategorySlugsForStaticGeneration,
 } from '@/lib/queries/catalog'
 import { parseFiltersFromSearchParams } from '@/lib/catalog/filters-parser'
 import { toProductCardData } from '@/lib/types/product-card'
@@ -22,10 +21,6 @@ const SITE_URL =
 
 export const dynamic = 'force-dynamic'
 export const revalidate = 3600
-
-export async function generateStaticParams() {
-  return getCategorySlugsForStaticGeneration()
-}
 
 type Params = { slug: string }
 type SearchParams = Record<string, string | string[] | undefined>

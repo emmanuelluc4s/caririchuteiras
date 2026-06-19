@@ -4,7 +4,6 @@ import { Star } from 'lucide-react'
 import {
   getProductBySlug,
   getRelatedProducts,
-  getProductSlugsForStaticGeneration,
 } from '@/lib/queries/product'
 import { prisma } from '@/lib/prisma'
 import { getActiveCoupon } from '@/lib/queries/active-coupon'
@@ -33,10 +32,6 @@ import { Badge } from '@/components/ui/badge'
 
 export const dynamic = 'force-dynamic'
 export const revalidate = 3600
-
-export async function generateStaticParams() {
-  return getProductSlugsForStaticGeneration()
-}
 
 type Params = { slug: string }
 
